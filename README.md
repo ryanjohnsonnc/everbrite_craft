@@ -1,13 +1,8 @@
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/1452/57405127-a7331580-71ab-11e9-8d16-0ee4a9c55328.jpg">
-</p>
 
-
-
-Padstone for Craft CMS
+EverBrite Craft CMS
 ======================
 
-Padstone is a starter package for Craft 3 built by Imarc. It provides a simple project config as well as example entries and templates.
+This is a CraftCMS site I am building for a client. I started with Padstone from Imarc as the base and manipulated it from there. Padstone is a starter package for Craft 3 built by Imarc. It provides a simple project config as well as example entries and templates.
 
 _If you would like to use the older version of Padstone for Craft 2, see the [craft2 branch](https://github.com/imarc/padstone/tree/craft2)._
 
@@ -25,28 +20,12 @@ Features
 Getting Started
 ---------------
 
-Create a new padstone project with the following [composer](https://getcomposer.org/) command:
-
-```sh
-composer create-project imarc/padstone [folder]
-```
-
-Enter the newly created folder and run the front-end buildstep.
-
 ```sh
 cd [folder]
 
 npm install
 npm run dev
 ```
-
-[Create your database](https://craftcms.com/docs/installing#step-3-create-your-database) and ensure the settings in your `.env` match your environment. At minimum, you'll need to tell Craft how to connect to your database and your domain. Then run the installer by going to /admin (except for your domain.)
-
-Optionally, you can import the supplied `padstone.sql` file into your database if you want Padstone's starter entries.
-
-### Logging in
-
-If you import `padstone.sql`, the username is *admin* and the password is *padstone*. Please change the password after you first login.
 
 Front-End Build
 ------------------------
@@ -80,18 +59,6 @@ If you are building to production, run:
 What's Included
 ---------------
 
-### Sections
-
-Padstone includes the following sections:
-
-* **Homepage**
-* **Blog Page** and **Blog Articles**
-* **News & Events Page**, **News Articles**, and **Events**
-* **Resources Page** and **Resources**
-* **About Page**, **Leadership Page**, **Contact Page**, **Privacy Page**, **People**
-* Custom **Landing Pages**
-* **Error Page** and **404 Page**
-
 
 ### Plugins
 
@@ -113,16 +80,6 @@ The following plugins are currently included and installed via [composer](https:
 * [Field Manager](https://plugins.craftcms.com/field-manager) - this is included, but not installed by default.
 
 
-#### Suggested Additional Plugins
-
-These plugins didn't make the cut for Padstone, but they are plugins we'd recommend people look at if they have specific needs:
-
-* [Element API](https://plugins.craftcms.com/element-api) - easy creation of JSON APIs for your website. Likely to be included in the next version of Padstone. Free.
-* [Feed Me](https://plugins.craftcms.com/feed-me) - import content into craft from XML, CSV, and other kinds of exports. Currently Pro is $99 and $30/year.
-* [Guide](https://plugins.craftcms.com/guide) - add documentation with Craft. Currently $39 and $19/year.
-* [Retour](https://plugins.craftcms.com/retour) - if the included Redirect Manager plugin isn't powerful enough, Retour provides some additional functionality and reporting beyond what Redirect Manager does. Currently $59 and $29/year.
-
-
 ### Macros
 
 There is a `_macros.twig` file that provides The following macros:
@@ -132,7 +89,7 @@ There is a `_macros.twig` file that provides The following macros:
 * **commaSeparate** - used to generate a comma separated list of elements based on title.
 
 
-### Blocks
+### Blocks (These really need to be updated)
 
 The **Content Designer** Field (designedContent) allows CMS users to use the following blocks out of the box:
 
@@ -148,9 +105,3 @@ The **Content Designer** Field (designedContent) allows CMS users to use the fol
 ## License
 
 Padstone is released under the MIT License.
-
-
-
-<img src="https://user-images.githubusercontent.com/1452/56690112-b04fbd00-66aa-11e9-9e87-049b403cfa26.png" alt="Imarc" width="100">
-
-© 2019 Imarc
