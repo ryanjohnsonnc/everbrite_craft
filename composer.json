@@ -1,0 +1,62 @@
+{
+  "name": "craftcms/craft",
+  "description": "Craft CMS",
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "project"
+  ],
+  "license": "MIT",
+  "homepage": "https://craftcms.com/",
+  "type": "project",
+  "support": {
+    "email": "support@craftcms.com",
+    "issues": "https://github.com/craftcms/cms/issues",
+    "forum": "https://craftcms.stackexchange.com/",
+    "source": "https://github.com/craftcms/cms",
+    "docs": "https://craftcms.com/docs",
+    "rss": "https://craftcms.com/changelog.rss"
+  },
+  "require": {
+    "php": ">=7.0.0",
+    "craftcms/cms": "~3.1.17",
+    "vlucas/phpdotenv": "^2.4.0",
+    "roave/security-advisories": "dev-master",
+    "nerds-and-company/schematic": "^3.8",
+    "dolphiq/redirect": "^1.0.15",
+    "misterbk/mix": "^1.4",
+    "verbb/expanded-singles": "^1.0",
+    "sebastianlenz/linkfield": "^1.0.4",
+    "luwes/craft3-codemirror": "^1.0",
+    "craftcms/redactor": "^2.0",
+    "wbrowar/adminbar": "^3.1.5",
+    "craftcms/contact-form": "^2.1",
+    "craftcms/contact-form-honeypot": "^1.0",
+    "rias/craft-position-fieldtype": "^1.0",
+    "verbb/field-manager": "^2.0",
+    "imarc/craft-kindling": "^2.0",
+    "ether/tags": "^1.0",
+    "imarc/craft-googlecustomsearch": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "modules\\": "modules/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@composer dump-autoload -o",
+      "@php craft setup/security-key",
+      "npx imarc/boilerplate-components",
+      "echo \"\n@import \\\"~bootstrap/scss/bootstrap\\\";\" >> resources/styles/main.scss",
+      "echo \"\nimport \\\"bootstrap\\\";\" >> resources/js/main.js"
+    ]
+  }
+}

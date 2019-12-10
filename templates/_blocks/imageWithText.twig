@@ -1,0 +1,27 @@
+<div class="builder-section image-with-text margin--top-half margin--bottom">
+  <div class="container">
+    {% if block.sectionTitle %}
+      <h2>
+        {{ block.sectionTitle }}
+      </h2>
+    {% endif %}
+
+    <div class="row align-items-center">
+      {% if block.position == 'left' %}
+        <div class="col-md-6">
+          {{ block.image.one.img }}
+        </div>
+        <div class="col-md-6 content">
+          {{ block.blockContent }}
+        </div>
+      {% else %}
+        <div class="col-md-6 content">
+          {{ block.blockContent }}
+        </div>
+        <div class="col-md-6">
+          {{ block.image.one.img }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

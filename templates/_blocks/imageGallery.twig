@@ -1,0 +1,11 @@
+<section class="image-gallery margin--bottom">
+  <div class="container-fluid">
+    <div class="image-gallery_slider">
+      {% set photos = block.images.all() %}
+      {% for photo in photos %}
+        <div class="image-gallery_slide" style="background-image: url({{photo.url}});"></div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+

@@ -1,0 +1,30 @@
+<section class="product-main pad--vertical">
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col-md-6 col-lg-7 product-main_images">
+        {% set photos = entry.productPhotos.all() %}
+        {% if photos|length %}
+          <div class="product-main_carousel margin--bottom-small">
+        
+            {% for photo in photos %}
+              <img src="{{ photo.url }}"/>
+            {% endfor %}
+          </div>
+          <div class="product-main_nav margin--bottom-small">
+            {% for photo in photos %}
+              <div class="slide">
+                <img src="{{ photo.url }}"/>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+
+      </div>
+      <div class="col-md-6 col-lg-5 product-main_content">
+        <h1 class="product-main_product-title">{{entry.title}}</h1>
+        {{ entry.productDescription }}
+      </div>
+    </div>
+  </div>
+</section>

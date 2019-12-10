@@ -1,0 +1,34 @@
+
+{% if block.backgroundImage is defined and block.backgroundImage|length > 0 %}
+  {% set backgroundImage = block.backgroundImage.one.url %}
+  {% set contentBg = 'true' %}
+{% else %}
+  {% set backgroundImage = '' %}
+  {% set contentBg = 'false' %}
+{% endif %}
+{% set backgroundColor = block.backgroundColor %}
+{% set textColor = block.textColor %}
+{% if(block.textPosition == 'center') %}
+  {% set contentClass = 'col-md-8 offset-md-2' %}
+{% endif %}
+{% if(block.textPosition == 'left') %}
+  {% set contentClass = 'col-md-6' %}
+{% endif %}
+
+{% if(block.textPosition == 'right') %}
+  {% set contentClass = 'col-md-6 offset-md-6' %}
+{% endif %}
+
+<section style="background-image: url({{backgroundImage}});" class="builder-section content-section rich-text pad--vertical text-{{textColor}} background-{{backgroundColor}}">
+  <div class="container">
+    <div class="content {{contentClass}} background--{{contentBg}}">
+      {% if block.sectionTitle %}
+        <h2>
+          {{ block.sectionTitle }}
+        </h2>
+      {% endif %}
+
+      {{ block.blockContent }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+.product-main {position: relative;
+  .product-main_carousel {
+
+  }
+
+  .product-main_nav {
+    .slide {
+      padding: 0px 16px;
+      img {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .product-main_content {
+    @include content-padding;
+    .product-main_product-title {
+      color: $color-primary;
+    }
+
+    @include breakpoint(md) {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 100px;
+    }
+  }
+}

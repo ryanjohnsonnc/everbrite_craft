@@ -1,0 +1,28 @@
+
+{% if block.backgroundImage is defined and block.backgroundImage|length > 0 %}
+  {% set backgroundImage = block.backgroundImage.one.url %}
+  {% set contentBg = 'true' %}
+{% else %}
+  {% set backgroundImage = '' %}
+  {% set contentBg = 'false' %}
+{% endif %}
+{% set backgroundColor = block.backgroundColor %}
+{% set textColor = block.textColor %}
+
+<section style="background-image: url({{backgroundImage}});" class="builder-section content-section two-column pad--vertical text-{{textColor}} background-{{backgroundColor}}">
+  <div class="container background--{{contentBg}}">
+    {% if block.sectionTitle %}
+      <h2>
+        {{ block.sectionTitle }}
+      </h2>
+    {% endif %}
+    <div class="row">
+      <div class="content col-md-6">
+        {{ block.leftContent }}
+      </div>
+      <div class="content col-md-6">
+        {{ block.rightContent }}
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,94 @@
+import 'slick-carousel';
+import './plugins/accordion.plugin';
+import './plugins/dropdown.plugin';
+import './plugins/mobileNavigation.plugin';
+import './plugins/stickyElement.plugin';
+import './plugins/stickyHeader.plugin';
+import './plugins/tabs.plugin';
+
+import "bootstrap";
+window.$ = $;
+
+/* Global Variables */
+var $window      = $(window),
+    wh           = $window.innerHeight,
+    globalHeader = $('.navbar'),
+    body         = $('body');
+
+
+$window.on('load', function(){
+  // Handles Sticky Nav
+  $window.scroll(function(){
+    if( $window.scrollTop() >= 30 ) {
+      globalHeader.addClass('scrolled');
+    } else {
+      globalHeader.removeClass('scrolled');
+    }
+  });
+
+  // Handle Empty Link Clicks
+  $('a[href="#"]').on('click', function(e) {
+    e.preventDefault;
+  });
+
+  // Product Photos Slider
+  var productSlider = $('.product-main_carousel');
+  var productNav    = $('.product-main_nav');
+  if(productSlider.length) {
+    productSlider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: productNav
+    });
+    productNav.slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      asNavFor: productSlider,
+      dots: true,
+      centerMode: true,
+      focusOnSelect: true
+    });
+
+    // Handling the clicking of the Promise button
+    $('.product-main_nav .nav-item').on('click', function(e) {
+      e.preventDefault;
+      console.log('hey');
+    });
+  }
+
+  // Image Gallery (.image-gallery_slider)
+  var imageSlider = $('.image-gallery_slider');
+  if(imageSlider.length) {
+    imageSlider.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      fade: true,
+    });
+
+  };
+
+});
+
+
+function isOnScreen(elem) {
+	// if the element doesn't exist, abort
+	if( elem.length == 0 ) {
+		return;
+	}
+	var $window = jQuery(window)
+	var viewport_top = $window.scrollTop()
+	var viewport_height = $window.height()
+	var viewport_bottom = viewport_top + viewport_height
+	var $elem = jQuery(elem)
+	var top = $elem.offset().top
+	var height = $elem.height()
+	var bottom = top + height
+
+	return (top >= viewport_top && top < viewport_bottom) ||
+	(bottom > viewport_top && bottom <= viewport_bottom) ||
+	(height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
+}

@@ -1,0 +1,12 @@
+{% import "/_macros" as macros %}
+{% set section = 'products' %}
+{% extends "_layouts/main" %}
+{% block content %}
+    {% include '_partials/product-main'%} 
+
+    {% if entry.designedContent %}
+        {{ macros.renderAllBlocks(entry.designedContent) }}
+    {% endif %}
+
+
+{% endblock %}

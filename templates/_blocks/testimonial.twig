@@ -1,0 +1,18 @@
+<div class="layer testimonial {% if not blockLoop.first %}pt-5{% endif %}">
+    <div class="container">
+        {% if block.sectionTitle %}
+            <h2>
+                {{ block.sectionTitle }}
+            </h2>
+        {% endif %}
+
+        <blockquote class="blockquote text-center">
+            {{ block.quote }}
+            <footer class="blockquote-footer">
+                {{ block.person }}, {{ block.jobTitle }}
+            </footer>
+        </blockquote>
+
+        <hr class="mt-5">
+    </div>
+</div>

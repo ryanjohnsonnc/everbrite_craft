@@ -1,0 +1,94 @@
+@if $use-boilerplate-classes {
+    .sr-only {
+        @include visuallyhidden;
+    }
+}
+
+/**
+ * Give padding or margin to the top and bottom of things
+ */
+ 
+ .pad--vertical {
+  padding-top: $global-spacing * 6 !important;
+  padding-bottom: $global-spacing * 6 !important;
+}
+ 
+.pad--top {
+  padding-top: $global-spacing * 6 !important;
+}
+
+.pad--top-half {
+  padding-top: $global-spacing * 3 !important;
+}
+
+
+.pad--bottom {
+  padding-bottom: $global-spacing * 6 !important;
+}
+
+.pad--bottom-half {
+  padding-bottom: $global-spacing * 3 !important;
+}
+
+.pad--half {
+  padding-top: $global-spacing * 3 !important;
+  padding-bottom: $global-spacing * 3 !important;
+}
+
+.margin--vertical {
+  margin-top: $global-spacing * 6 !important;
+  margin-bottom: $global-spacing * 6 !important;
+}
+
+.margin--top {
+  margin-top: $global-spacing * 6 !important;
+}
+
+.margin--top-half {
+  margin-top: $global-spacing * 3 !important;
+}
+
+.margin--bottom {
+  margin-bottom: $global-spacing * 6 !important;
+}
+
+.margin--bottom-half {
+  margin-bottom: $global-spacing * 3 !important;
+}
+
+.margin--bottom-small {
+  margin-bottom: $global-spacing * 1.5 !important;
+}
+
+.margin--half {
+  margin-top: $global-spacing * 3 !important;
+  margin-bottom: $global-spacing * 3 !important;
+}
+
+
+/**
+ * Background Color Utilities
+ */
+.background-white {
+  background-color: white;
+}
+
+.background-orange {
+  background-color: $brand-orange;
+}
+
+.background-black {
+  background-color: black;
+}
+
+.background-lightGray {
+  background-color: $lightgray;
+}
+
+.background-gray {
+  background-color: $gray;
+}
+
+.background-darkGray {
+  background-color: $darkgray;
+}

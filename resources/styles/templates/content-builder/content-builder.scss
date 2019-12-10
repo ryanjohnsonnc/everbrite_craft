@@ -1,0 +1,79 @@
+.builder-section {
+  &.content-section {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    
+    &.text-light {
+      .content.background--true {
+        background-color: rgba(orange, .8);
+        border-left: 8px solid white;
+        & > * {
+          color: white;
+        }
+
+      }
+      .container.background--true {
+        background-color: rgba(orange, .8);
+        border: 8px solid white;
+      }      
+    }
+
+    &.text-dark {
+      .content.background--true {
+        background-color: rgba(white, .8);
+        border-left: 8px solid $color-primary;
+      }
+      .container.background--true {
+        background-color: rgba(white, .8);
+        border: 8px solid $color-primary;
+      } 
+    }
+  }
+
+  &.rich-text {
+    .content {
+      padding: 24px;
+
+      @include breakpoint(lg) {
+        padding: 48px;
+      }
+    }
+  }
+
+  &.two-column {
+    .container.background--true {
+      padding: 24px;
+
+      @include breakpoint(lg) {
+        padding: 48px;
+      }
+    }
+
+    .content {
+      @include breakpoint(md) {
+        &:first-of-type {
+          padding-right: 24px;
+        }
+        &:last-of-type {
+          padding-left: 24px;
+        }
+      }
+      @include breakpoint(lg) {
+        &:first-of-type {
+          padding-right: 36px;
+        }
+        &:last-of-type {
+          padding-left: 36px;
+        }
+      }
+    }
+  }
+
+  &.image-with-text,
+  &.video-with-text {
+    .content {
+      @include content-padding;
+    }
+  }
+}

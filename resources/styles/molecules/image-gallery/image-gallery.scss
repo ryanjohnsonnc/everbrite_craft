@@ -1,0 +1,23 @@
+.image-gallery {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0px;
+
+  .image-gallery_slider {
+    
+  }
+
+  .image-gallery_slide {
+    border: 8px solid $color-primary;
+    padding-top: 40%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+  }
+}
