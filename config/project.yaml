@@ -21,7 +21,7 @@ categoryGroups:
         hasUrls: true
         uriFormat: 'product-categories/{slug}'
         template: ''
-dateModified: 1575950856
+dateModified: 1576006019
 email:
   fromEmail: kevin@imarc.com
   fromName: Padstone
@@ -1380,6 +1380,25 @@ matrixBlockTypes:
           availableTransforms: '*'
         contentColumnType: text
         fieldGroup: null
+      5bde5953-1df9-4cd9-bcfa-7a66874e9898:
+        name: 'Content Position'
+        handle: contentPosition
+        instructions: ''
+        searchable: false
+        translationMethod: none
+        translationKeyFormat: null
+        type: rias\positionfieldtype\fields\Position
+        settings:
+          options:
+            left: '1'
+            center: ''
+            right: '1'
+            full: ''
+            drop-left: ''
+            drop-right: ''
+          default: left
+        contentColumnType: string
+        fieldGroup: null
       85c7e535-dbcd-4e5d-af41-3bf0b93d5c89:
         name: 'Section Title'
         handle: sectionTitle
@@ -1397,6 +1416,32 @@ matrixBlockTypes:
           columnType: text
         contentColumnType: text
         fieldGroup: null
+      fe8e3459-926b-45fe-b5a4-a263e3b556b3:
+        name: 'Background Image'
+        handle: backgroundImage
+        instructions: 'Please select an image to use as the background behind this call to action.'
+        searchable: false
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: '1'
+          defaultUploadLocationSource: 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          singleUploadLocationSubpath: ''
+          restrictFiles: ''
+          allowedKinds: null
+          sources:
+            - 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          source: null
+          targetSiteId: null
+          viewMode: list
+          limit: '1'
+          selectionLabel: 'Add a background'
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
     fieldLayouts:
       3cb15008-c34e-4c01-a542-0a152034242a:
         tabs:
@@ -1410,9 +1455,15 @@ matrixBlockTypes:
               24bcd6a1-3fa6-4839-940a-af27d389740b:
                 required: false
                 sortOrder: 2
+              5bde5953-1df9-4cd9-bcfa-7a66874e9898:
+                required: true
+                sortOrder: 4
               85c7e535-dbcd-4e5d-af41-3bf0b93d5c89:
                 required: false
                 sortOrder: 1
+              fe8e3459-926b-45fe-b5a4-a263e3b556b3:
+                required: true
+                sortOrder: 5
 plugins:
   admin-bar:
     enabled: '1'

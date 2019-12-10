@@ -107,33 +107,28 @@
         </div>
       </nav>
 
-      <main role="main" class="mt-5">
-          {% block content %}{% endblock %}
+      <main role="main" class="margin--top">
+        {% block content %}{% endblock %}
       </main>
 
-      <footer class="bg-dark text-white py-5 mt-5">
-          <div class="container">
-              <div class="row">
-                  <div class="col-12 col-md">
-                      {{ siteName }}
-                      <small class="d-block mb-3 text-muted">© {{ "now"|date("Y") }}</small>
-                  </div>
-                  <div class="col-6 col-md">
-                      {% set page = craft.entries.section('blogPage').one %}
-                      <h5><a class="text-white" href="{{ page.url }}">{{ page.title }}</a></h5>
-                  </div>
-                  
-              </div>
+      <footer class="background-orange text-white pad--small">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-md">
+              {# {{ siteName }} #}
+              <small class="d-block">© {{ "now"|date("Y") }} | All Rights Reserved | EverBrite</small>
+            </div>
           </div>
+        </div>
       </footer>
 
 
-        <script src="{{ mix('/js/manifest.js') }}"></script>
-        <script src="{{ mix('/js/vendor.js') }}"></script>
-        <script src="{{ mix('/js/main.js') }}"></script>
+      <script src="{{ mix('/js/manifest.js') }}"></script>
+      <script src="{{ mix('/js/vendor.js') }}"></script>
+      <script src="{{ mix('/js/main.js') }}"></script>
 
-        {% if entry is defined and entry.footerCode %}
-            {{ entry.footerCode|raw }}
-        {% endif %}
+      {% if entry is defined and entry.footerCode %}
+        {{ entry.footerCode|raw }}
+      {% endif %}
     </body>
 </html>

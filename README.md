@@ -4,19 +4,6 @@ EverBrite Craft CMS
 
 This is a CraftCMS site I am building for a client. I started with Padstone from Imarc as the base and manipulated it from there. Padstone is a starter package for Craft 3 built by Imarc. It provides a simple project config as well as example entries and templates.
 
-_If you would like to use the older version of Padstone for Craft 2, see the [craft2 branch](https://github.com/imarc/padstone/tree/craft2)._
-
-Features
---------
-
-* Pre-built CMS sections, including ones for the Homepage, a Blog, News, and Resources. (18 in total!)
-* A set of **Bootstrap 4** twig templates for you to replace or customize.
-* A matrix-based **Content Designer** field, built within Craft, for laying out pages beyond simple rich text.
-* A set of (free) plugins selected by Imarc that we recommend for new projects.
-
-<img src="https://user-images.githubusercontent.com/1452/56689796-f0fb0680-66a9-11e9-8b4b-e66690ed9607.jpg">
-
-
 Getting Started
 ---------------
 
