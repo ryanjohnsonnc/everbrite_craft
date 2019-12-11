@@ -11,24 +11,41 @@
     {% endif %}
 
     {% if entry is defined %}
-        {% if title is not defined %}
-            {% set title = entry.htmlTitleOverride ?: (entry.title ~ " | " ~ siteName) %}
-        {% endif %}
+      {% if title is not defined %}
+          {% set title = entry.htmlTitleOverride ?: (entry.title ~ " | " ~ siteName) %}
+      {% endif %}
 
-        {% set bodyClasses = bodyClasses|merge(['section-' ~ (entry.section.handle|kebab)]) %}
+      {% set bodyClasses = bodyClasses|merge(['section-' ~ (entry.section.handle|kebab)]) %}
 
-        {% if metaDescription is not defined %}
-            {% set metaDescription = entry.metaDescription %}
-        {% endif %}
-        {% if openGraphDescription is not defined %}
-            {% set openGraphDescription = entry.openGraphDescription %}
-        {% endif %}
-        {% if openGraphImage is not defined and entry.openGraphImage|length > 0 %}
-            {% set openGraphImage = entry.openGraphImage.one.url %}
-        {% endif %}
-        {% if openGraphTitle is not defined %}
-            {% set openGraphTitle = entry.openGraphTitle %}
-        {% endif %}
+      {% if metaDescription is not defined %}
+          {% set metaDescription = entry.metaDescription %}
+      {% endif %}
+      {% if openGraphDescription is not defined %}
+          {% set openGraphDescription = entry.openGraphDescription %}
+      {% endif %}
+      {% if openGraphImage is not defined and entry.openGraphImage|length > 0 %}
+          {% set openGraphImage = entry.openGraphImage.one.url %}
+      {% endif %}
+      {% if openGraphTitle is not defined %}
+          {% set openGraphTitle = entry.openGraphTitle %}
+      {% endif %}
+    {% else %}
+      {% if title is not defined %}
+          {% set title = category.htmlTitleOverride ?: (category.title ~ " | " ~ siteName) %}
+      {% endif %}
+
+      {% if metaDescription is not defined %}
+          {% set metaDescription = category.metaDescription %}
+      {% endif %}
+      {% if openGraphDescription is not defined %}
+          {% set openGraphDescription = category.openGraphDescription %}
+      {% endif %}
+      {% if openGraphImage is not defined and category.openGraphImage|length > 0 %}
+          {% set openGraphImage = category.openGraphImage.one.url %}
+      {% endif %}
+      {% if openGraphTitle is not defined %}
+          {% set openGraphTitle = category.openGraphTitle %}
+      {% endif %}
     {% endif %}
 
 {% endspaceless %}
@@ -61,7 +78,7 @@
         {% endif %}
     </head>
     <body class="{{ bodyClasses|join(' ') }}" >
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container">
           <a class="navbar-brand" href="/"><img src="/media/EverBrite-logo.png" class="site-logo"/></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +88,7 @@
           <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item {{ section == 'products' ? 'active' : '' }}">
-                {% set page = craft.entries.section('products').one %}
+                {% set page = craft.entries.section('productsPage').one %}
                 <a class="nav-link" href="{{ page.url }}">
                   Products
                   {% if section == 'products' %}

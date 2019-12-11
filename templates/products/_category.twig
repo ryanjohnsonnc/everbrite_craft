@@ -1,0 +1,29 @@
+{% import "/_macros" as macros %}
+{% set section = 'products' %}
+{% extends "_layouts/main" %}
+{% block content %}
+  {% include '_partials/page-title' with {
+    headline: category.title,
+    subheadline: category.subheadline,
+  } %}
+
+  <section class="product-feed pad--vertical">
+    <div class="container">
+      <div class="row">
+        {% if category.productCategoryPhoto is defined and category.productCategoryPhoto|length > 0 %}
+          <img src="{{ category.productCategoryPhoto.one.url }}" class="mb-3"/>
+        {% endif %}
+      </div>
+    <div class="row">
+        {% for entry in craft.entries.section('products').relatedTo(category) %}
+          <div class="col-md-6 col-lg-4">
+            {% include '_partials/product-tile' with {
+              product: entry
+            } %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

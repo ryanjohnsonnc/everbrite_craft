@@ -78,7 +78,8 @@
   background-color: white;
 }
 
-.background-orange {
+.background-orange,
+.background-primary {
   background-color: $brand-orange;
 }
 
@@ -96,4 +97,29 @@
 
 .background-darkGray {
   background-color: $darkgray;
+}
+
+.background-charcoal,
+.bg-dark {
+  background-color: $charcoal !important;
+}
+
+
+/**
+ * Text Color Utilities
+ */
+ .color--primary {
+   color: $color-primary !important;
+ }
+
+
+ /**
+ * Offset Section Utilities
+ */
+
+.offset--top {
+  @include breakpoint(md) {
+    position: relative;
+    bottom: -64px;
+  }
 }

@@ -4,9 +4,15 @@
 {% set entry = craft.entries.section('errorPage').one %}
 
 {% block content %}
+    {% if entry.heroBackground is defined and entry.heroBackground|length > 0 %}
+      {% set heroBackground = entry.heroBackground.one.url %}
+    {% else %}
+      {% set heroBackground = '' %}
+    {% endif %}
     {% include '_partials/hero' with {
-        headline: entry.headline,
-        subheadline: entry.subheadline
+      headline: entry.headline,
+      subheadline: entry.subheadline,
+      background: heroBackground
     } %}
 
     {{ macros.renderAllBlocks(entry.designedContent) }}

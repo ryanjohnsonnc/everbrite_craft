@@ -1,0 +1,10 @@
+.contact {
+  @include breakpoint(md) {
+    padding-bottom: 64px;
+  }
+  .contact_content {
+    @include breakpoint(md) { 
+      border-left: 12px solid $black;
+    }
+  }
+}

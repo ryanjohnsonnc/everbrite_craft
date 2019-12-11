@@ -2,22 +2,32 @@
 {% set section = 'blog' %}
 {% extends "_layouts/main" %}
 {% block content %}
-    {% include '_partials/hero' with {
-        headline: entry.headline,
-        subheadline: entry.subheadline
-    } %}
+  {% if entry.heroBackground is defined and entry.heroBackground|length > 0 %}
+    {% set heroBackground = entry.heroBackground.one.url %}
+  {% else %}
+    {% set heroBackground = '' %}
+  {% endif %}
+  {% include '_partials/hero' with {
+    headline: entry.headline,
+    subheadline: entry.subheadline,
+    background: heroBackground
+  } %}
 
-    <div class="articles">
+  <section class="feed pad--vertical">
+    <div class="container">
+      <div class="row">
         {% for article in craft.entries.section('blog').all() %}
-            <div class="my-5">
-                <div class="container mb-0">
-                    <h2>{{ article.link }}</h2>
-                    <p class="text-muted">{{ article.blogDate|date("F jS, Y") }}</p>
+          <div class="feed_article col-md-6 col-lg-4 align-items-stretch">
+            <div class="feed_article-card">
+              <h2>{{ article.link }}</h2>
+              <p class="text-muted">{{ article.blogDate|date("F jS, Y") }}</p>
 
-                    {{ article.blogAbstract }}
-                </div>
+              {{ article.blogAbstract }}
             </div>
+          </div>
         {% endfor %}
+      </div>
     </div>
+  </section>
 
 {% endblock %}

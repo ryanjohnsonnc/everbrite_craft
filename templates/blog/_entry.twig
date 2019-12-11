@@ -2,20 +2,36 @@
 {% set section = 'blog' %}
 {% extends "_layouts/main" %}
 {% block content %}
-    {% include '_partials/hero' with {
+    {# {% include '_partials/hero' with {
         headline: entry.title
-    } %}
-
+    } %} #}
+  <article class="margin--vertical pad--top blog_article">
     <div class="container">
-        <p class="text-muted">{{ entry.blogDate|date("F jS, Y") }}</p>
+      <div class="row">
+        <div class="col-sm-12 margin--bottom-small">
+          {% if entry.blogFeaturedImage is defined and entry.blogFeaturedImage|length > 0 %}
+            <img src="{{ entry.blogFeaturedImage.one.url }}" class="mb-3"/>
+          {% endif %}
+          <h1 class="color--primary">{{entry.title }}</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 margin--bottom-small">
+          <p class="text-muted">{{ entry.blogDate|date("F jS, Y") }}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 blog_article-content">
+          {{entry.blogContent}}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 offset-md-3 text-center margin--top">
+          {% set index = craft.entries.section('blogPage').one %}
+          <a class="btn btn-outline-secondary btn-large" href="{{ index.url }}">Return to {{ index.title }}</a>
+        </div>
+      </div>
     </div>
-
-    {{ macros.renderAllBlocks(entry.designedContent) }}
-
-    <div class="text-center my-5">
-        {% set index = craft.entries.section('blogPage').one %}
-        <a class="btn btn-outline-secondary" href="{{ index.url }}">Return to {{ index.title }}</a>
-    </div>
-
-
+  </article>
+  {{ macros.renderAllBlocks(entry.designedContent) }}
 {% endblock %}

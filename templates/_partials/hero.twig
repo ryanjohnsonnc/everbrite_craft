@@ -1,9 +1,14 @@
-<!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
-    <div class="container">
-        <h1 class="display-3">{{ headline }}</h1>
-        {% if subheadline|length %}
-        	<p class="lead">{{ subheadline }}</p>
-        {% endif %}
+<section class="hero">
+  <div class="hero_background">
+    <div class="hero_background-image" style="background-image: url({{background}});"></div>
+    <div class="hero_background-gradient"></div>
+  </div>
+  <div class="container pad--vertical">
+    <div class="col-md-8 col-lg-6 text-white hero_content">
+      <h1>{{ headline }}</h1>
+      {% if subheadline is defined and subheadline|length %}
+        <p class="lead">{{ subheadline }}</p>
+      {% endif %}
     </div>
-</div>
+  </div>
+</section>

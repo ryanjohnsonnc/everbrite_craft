@@ -1,0 +1,15 @@
+.feed {
+  .feed_article {
+    margin-bottom: 32px;
+    padding: 0px 16px;
+    .feed_article-card {
+      @include default-shadow;
+      @include transition(all .3s ease);
+      height: 100%;
+      padding: 24px;
+      &:hover {
+        @include default-hover-shadow;
+      }
+    }
+  }
+}

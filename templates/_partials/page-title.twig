@@ -1,0 +1,12 @@
+<section class="page-title background-primary">
+  <div class="container pad--small">
+    <div class="row">
+      <div class="col-md-8 col-lg-6 text-white page-title_content">
+        <h1>{{ headline }}</h1>
+        {% if subheadline is defined and subheadline|length %}
+          <p class="lead">{{ subheadline }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

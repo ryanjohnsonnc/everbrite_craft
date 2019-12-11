@@ -1,11 +1,16 @@
 {% import "/_macros" as macros %}
 {% extends "_layouts/main" %}
 {% block content %}
-    {% include '_partials/hero' with {
-        headline: entry.headline,
-        subheadline: entry.subheadline
-    } %}
+  {% if entry.heroBackground is defined and entry.heroBackground|length > 0 %}
+    {% set heroBackground = entry.heroBackground.one.url %}
+  {% else %}
+    {% set heroBackground = '' %}
+  {% endif %}
+  {% include '_partials/hero' with {
+    headline: entry.headline,
+    subheadline: entry.subheadline,
+    background: heroBackground
+  } %}
 
-    {{ macros.renderAllBlocks(entry.designedContent) }}
-
+  {{ macros.renderAllBlocks(entry.designedContent) }}
 {% endblock %}

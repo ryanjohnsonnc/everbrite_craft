@@ -31,6 +31,28 @@
     }
   }
 
+  &.call-to-action {
+    position: relative;
+    background-attachment: initial;
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      background-color: $black;
+      @include opacity(.6);
+      z-index: 1;
+    }
+
+    & > .container {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
   &.rich-text {
     .content {
       padding: 24px;

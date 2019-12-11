@@ -1,0 +1,16 @@
+.product-tile {
+  position: relative;
+  background-color: transparent;
+  box-shadow: none;
+  @include transition(all .3s ease);
+
+  .product-tile_title {
+    @include font-size(24);
+    font-weight: 900;
+  }
+  &:hover,
+  &:focus {
+    background-color: #f7f7f7;
+    @include default-shadow; 
+  }
+}

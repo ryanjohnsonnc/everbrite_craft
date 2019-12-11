@@ -47,8 +47,8 @@ $info: #DDD !default;
 
 $plain-text: $charcoal !default;
 $meta-text: lighten($charcoal, 35%) !default;
-$link: $brand-blue !default;
-$link-hover: $brand-orange !default;
+$link: $brand-orange !default;
+$link-hover: darken($brand-orange, 5%) !default;
 $border: lighten($charcoal, 60%) !default;
 $color-primary: $brand-orange;
 

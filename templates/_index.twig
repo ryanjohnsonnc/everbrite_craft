@@ -2,9 +2,10 @@
 {% set section = 'home' %}
 {% extends "_layouts/main" %}
 {% block content %}
-    {% include '_partials/hero' with {
-        headline: entry.headline,
-        subheadline: entry.subheadline
+    {% include '_partials/home-hero' with {
+        backgroundVideo: entry.heroBackgroundVideo,
+        video: entry.heroVideo,
+        placeholderImage: entry.heroPlaceholderImage.one.url
     } %}
 
     {{ macros.renderAllBlocks(entry.designedContent, true) }}
