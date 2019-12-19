@@ -1,0 +1,38 @@
+
+{% if block.backgroundImage is defined and block.backgroundImage|length > 0 %}
+  {% set backgroundImage = block.backgroundImage.one.url %}
+
+{% else %}
+  {% set backgroundImage = '' %}
+{% endif %}
+
+<section style="background-image: url({{backgroundImage}});" class="builder-section product-section pad--vertical">
+  <div class="container">
+
+    <div class="row align-items-center">
+      {% if block.position == 'left' %}
+        <div class="content pad--half col-md-6 color--white">
+          <h2 class="">
+            {{ block.productTitle }}
+          </h2>
+
+          {{ block.productContent }}
+        </div>
+        <div class="image col-md-6">
+          {{ block.productImage.one.img }}
+        </div>
+      {% else %}
+        <div class="image col-md-6">
+          {{ block.productImage.one.img }}
+        </div>
+        <div class="content pad--half col-md-6 color--white">
+          <h2 class="">
+            {{ block.productTitle }}
+          </h2>
+
+          {{ block.productContent }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

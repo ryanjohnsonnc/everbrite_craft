@@ -1,0 +1,19 @@
+<section class="product-intro pad--vertical">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-5 product-intro_content">
+        <h2>{{ title }}</h2>
+        {{ content }}
+      </div>
+      <div class="col-lg-7">
+        <div class="product-intro_slider">
+          {% for photo in photos %}
+            <div class="slide">
+              <img src="{{ photo.url }}"/>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

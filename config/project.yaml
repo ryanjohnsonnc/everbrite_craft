@@ -54,7 +54,7 @@ categoryGroups:
               e72e6691-b2c5-41b9-b75e-56b6a7200933:
                 required: false
                 sortOrder: 1
-dateModified: 1576033138
+dateModified: 1576712873
 email:
   fromEmail: kevin@imarc.com
   fromName: Padstone
@@ -757,6 +757,27 @@ fields:
     translationKeyFormat: null
     translationMethod: none
     type: craft\redactor\Field
+  c6dc8624-ac34-444f-b3b7-52051ef7a370:
+    name: Content
+    handle: defaultContent
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\redactor\Field
+    settings:
+      redactorConfig: ''
+      purifierConfig: ''
+      cleanupHtml: true
+      removeInlineStyles: '1'
+      removeEmptyTags: '1'
+      removeNbsp: '1'
+      purifyHtml: '1'
+      columnType: text
+      availableVolumes: ''
+      availableTransforms: '*'
+    contentColumnType: text
+    fieldGroup: c4593c73-7ed0-4694-9aa8-fa73bd8c1b1b
   cd059144-5cb6-46db-bcea-8d8e1d747107:
     contentColumnType: datetime
     fieldGroup: 61009477-6ca8-4122-b871-b3b715eec012
@@ -1078,6 +1099,173 @@ matrixBlockTypes:
               d2524070-e312-4374-a87d-013df33f44bd:
                 required: false
                 sortOrder: 1
+  4d007259-fe8a-420e-8a59-2902ec7bb3e1:
+    field: 7ccca481-afc6-4d2d-a691-46d51885c73e
+    name: 'Product Section'
+    handle: productSection
+    sortOrder: 8
+    fields:
+      0c01f6c9-1abb-42e1-af66-c8d8c83bdbf3:
+        name: 'Product Image Position'
+        handle: position
+        instructions: 'What side should the Product Image be on?'
+        searchable: false
+        translationMethod: none
+        translationKeyFormat: null
+        type: rias\positionfieldtype\fields\Position
+        settings:
+          options:
+            left: '1'
+            center: ''
+            right: '1'
+            full: ''
+            drop-left: ''
+            drop-right: ''
+          default: left
+        contentColumnType: string
+        fieldGroup: null
+      15d039b2-25e1-47f1-a5d1-f2d8e85a6587:
+        name: Title
+        handle: productTitle
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\fields\PlainText
+        settings:
+          placeholder: ''
+          code: ''
+          multiline: ''
+          initialRows: '4'
+          charLimit: ''
+          columnType: text
+        contentColumnType: text
+        fieldGroup: null
+      8458d470-e3d2-4976-972a-3d50902bb120:
+        name: 'Product Image'
+        handle: productImage
+        instructions: 'Please upload a transparent png on a canvas that is 1000 x 1000 pixels.'
+        searchable: false
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: '1'
+          defaultUploadLocationSource: 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          singleUploadLocationSubpath: ''
+          restrictFiles: '1'
+          allowedKinds:
+            - image
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: list
+          limit: '1'
+          selectionLabel: ''
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
+      a5ea602c-0aff-4e2e-905a-2016136d168c:
+        name: 'Background Image'
+        handle: backgroundImage
+        instructions: ''
+        searchable: false
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: '1'
+          defaultUploadLocationSource: 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          singleUploadLocationSubpath: ''
+          restrictFiles: '1'
+          allowedKinds:
+            - image
+          sources:
+            - 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          source: null
+          targetSiteId: null
+          viewMode: list
+          limit: '1'
+          selectionLabel: 'Add a background image'
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
+      cf3e21c0-4e35-4973-b1ea-578dce50736b:
+        name: Thumbnails
+        handle: thumbnails
+        instructions: ''
+        searchable: true
+        translationMethod: site
+        translationKeyFormat: null
+        type: craft\fields\Assets
+        settings:
+          useSingleFolder: '1'
+          defaultUploadLocationSource: 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          defaultUploadLocationSubpath: ''
+          singleUploadLocationSource: 'volume:09773b73-a304-4513-84fd-c4d5d4dd953a'
+          singleUploadLocationSubpath: ''
+          restrictFiles: '1'
+          allowedKinds:
+            - image
+          sources: '*'
+          source: null
+          targetSiteId: null
+          viewMode: list
+          limit: '5'
+          selectionLabel: 'Add thumbnails'
+          localizeRelations: false
+        contentColumnType: string
+        fieldGroup: null
+      ee25108c-170b-4117-9e4e-07815243cb42:
+        name: Content
+        handle: productContent
+        instructions: ''
+        searchable: false
+        translationMethod: none
+        translationKeyFormat: null
+        type: craft\redactor\Field
+        settings:
+          redactorConfig: ''
+          purifierConfig: ''
+          cleanupHtml: true
+          removeInlineStyles: '1'
+          removeEmptyTags: '1'
+          removeNbsp: '1'
+          purifyHtml: '1'
+          columnType: text
+          availableVolumes: ''
+          availableTransforms: '*'
+        contentColumnType: text
+        fieldGroup: null
+    fieldLayouts:
+      56573ee3-69d7-45b9-bb54-a6b3877dbc70:
+        tabs:
+          -
+            name: Content
+            sortOrder: 1
+            fields:
+              0c01f6c9-1abb-42e1-af66-c8d8c83bdbf3:
+                required: true
+                sortOrder: 3
+              15d039b2-25e1-47f1-a5d1-f2d8e85a6587:
+                required: true
+                sortOrder: 4
+              8458d470-e3d2-4976-972a-3d50902bb120:
+                required: true
+                sortOrder: 2
+              a5ea602c-0aff-4e2e-905a-2016136d168c:
+                required: true
+                sortOrder: 1
+              cf3e21c0-4e35-4973-b1ea-578dce50736b:
+                required: true
+                sortOrder: 6
+              ee25108c-170b-4117-9e4e-07815243cb42:
+                required: true
+                sortOrder: 5
   7f264ef3-9650-4cb3-9de7-cdc442a98a4d:
     field: 7ccca481-afc6-4d2d-a691-46d51885c73e
     name: 'HTML Widget/Embed'
@@ -2263,15 +2451,12 @@ sections:
           e20267cc-14f4-404a-8584-47f2d9632f91:
             tabs:
               -
-                name: Homepage
+                name: Hero
                 sortOrder: 1
                 fields:
                   1b530a37-a8f5-4acd-ae6c-de2a21fdf1e4:
                     required: false
                     sortOrder: 3
-                  7ccca481-afc6-4d2d-a691-46d51885c73e:
-                    required: false
-                    sortOrder: 4
                   bf481ee2-fbb9-48e8-ad2f-53f93309d46a:
                     required: false
                     sortOrder: 2
@@ -2279,8 +2464,28 @@ sections:
                     required: false
                     sortOrder: 1
               -
-                name: SEO
+                name: 'Product Intro'
                 sortOrder: 2
+                fields:
+                  4e031b1d-eb8f-4453-90bc-165adf99fd49:
+                    required: false
+                    sortOrder: 1
+                  908441b8-15e1-443a-b09b-5ab708e16eb0:
+                    required: false
+                    sortOrder: 3
+                  c6dc8624-ac34-444f-b3b7-52051ef7a370:
+                    required: false
+                    sortOrder: 2
+              -
+                name: 'Content Designer'
+                sortOrder: 3
+                fields:
+                  7ccca481-afc6-4d2d-a691-46d51885c73e:
+                    required: false
+                    sortOrder: 1
+              -
+                name: SEO
+                sortOrder: 4
                 fields:
                   0ba5cfaa-93ea-41f9-8b0b-46c048b5b209:
                     required: false

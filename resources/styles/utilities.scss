@@ -78,6 +78,10 @@
   background-color: white;
 }
 
+.background-white--opace {
+  background-color: rgba(white, .8);
+}
+
 .background-orange,
 .background-primary {
   background-color: $brand-orange;
@@ -111,6 +115,10 @@
  .color--primary {
    color: $color-primary !important;
  }
+
+ .color--white {
+  color: white !important;
+}
 
 
  /**

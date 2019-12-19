@@ -8,6 +8,13 @@
         placeholderImage: entry.heroPlaceholderImage.one.url
     } %}
 
+    {% include '_partials/product-intro' with {
+      title: entry.headline,
+      content: entry.defaultContent,
+      photos: entry.productPhotos.all()
+
+    } %}
+
     {{ macros.renderAllBlocks(entry.designedContent, true) }}
 
 {% endblock %}

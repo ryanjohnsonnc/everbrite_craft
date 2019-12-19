@@ -38,11 +38,12 @@ return [
     ],
 
     // Dev environment settings
-    'dev' => [
+    'everbrite.test' => [
+
     ],
 
     // Staging environment settings
-    'staging' => [
+    'greatstartools.com/everbrite' => [
     ],
 
     // Production environment settings
