@@ -9,7 +9,7 @@ let webpack = require('webpack');
 // recommended. The mix-manifest.json file will be created within this path.
 
 mix.setResourceRoot(process.env.RESOURCE_ROOT || '/');
-mix.setPublicPath('web');
+mix.setPublicPath('/');
 
 // Mix Options
 
@@ -61,7 +61,7 @@ mix.autoload({
 
 // Asset Config
 
-mix.copyDirectory('resources/media', 'web/media');
+mix.copyDirectory('resources/media', '/media');
 
 mix.js('resources/js/plugins/accordion.plugin.js', 'js/plugins');
 mix.js('resources/js/plugins/stickyElement.plugin.js', 'js/plugins');

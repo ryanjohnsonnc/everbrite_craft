@@ -1,0 +1,22 @@
+{
+    "/js/main.js": "/js/main.js",
+    "/js/main.js.map": "/js/main.js.map",
+    "/js/manifest.js": "/js/manifest.js",
+    "/js/manifest.js.map": "/js/manifest.js.map",
+    "/js/plugins/accordion.plugin.js": "/js/plugins/accordion.plugin.js",
+    "/css/main.css": "/css/main.css",
+    "/js/plugins/accordion.plugin.js.map": "/js/plugins/accordion.plugin.js.map",
+    "/css/main.css.map": "/css/main.css.map",
+    "/js/plugins/dropdown.plugin.js": "/js/plugins/dropdown.plugin.js",
+    "/js/plugins/dropdown.plugin.js.map": "/js/plugins/dropdown.plugin.js.map",
+    "/js/plugins/mobileNavigation.plugin.js": "/js/plugins/mobileNavigation.plugin.js",
+    "/js/plugins/mobileNavigation.plugin.js.map": "/js/plugins/mobileNavigation.plugin.js.map",
+    "/js/plugins/stickyElement.plugin.js": "/js/plugins/stickyElement.plugin.js",
+    "/js/plugins/stickyElement.plugin.js.map": "/js/plugins/stickyElement.plugin.js.map",
+    "/js/plugins/stickyHeader.plugin.js": "/js/plugins/stickyHeader.plugin.js",
+    "/js/plugins/stickyHeader.plugin.js.map": "/js/plugins/stickyHeader.plugin.js.map",
+    "/js/plugins/tabs.plugin.js": "/js/plugins/tabs.plugin.js",
+    "/js/plugins/tabs.plugin.js.map": "/js/plugins/tabs.plugin.js.map",
+    "/js/vendor.js": "/js/vendor.js",
+    "/js/vendor.js.map": "/js/vendor.js.map"
+}

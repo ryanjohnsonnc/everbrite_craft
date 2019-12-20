@@ -5,7 +5,8 @@
 /node_modules
 /storage
 /vendor
-/web/cpresources
-/web/css
-/web/js
-mix-manifest.json
+#/web/cpresources
+#/web/css
+#/web/js
+#mix-manifest.json
+/media
