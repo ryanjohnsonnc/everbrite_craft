@@ -1,7 +1,28 @@
 .navbar {
   padding-top: 24px;
   padding-bottom: 24px;
-  background-color: $charcoal;
+  background-color: transparent;
+  border-bottom: 1px solid $charcoal;
+  @include transition(all .3s ease);
+
+  &.scrolled {
+    background-color: white;
+    border-bottom-color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+
+    .navbar-brand {
+      max-width: 150px;
+    }
+
+    .navbar-nav {
+      li {
+        a {
+          color: $charcoal !important;
+        }
+      }
+    }
+  }
   
   & > .container {
     padding-left: 0px;
@@ -23,7 +44,7 @@
 
         a {
           font-weight: $font-weight-bold;
-          @include font-size(22);
+          @include font-size(18);
           text-transform: uppercase;
         }
       }
