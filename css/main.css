@@ -18736,6 +18736,21 @@ nav.navbar {
   }
 }
 
+.navbar .mega-menu {
+  position: static;
+}
+
+.navbar .mega-menu .dropdown-menu {
+  background: none;
+  background-color: white;
+  border: none;
+  width: 100%;
+}
+
+.navbar .mega-menu .dropdown-menu .container {
+  padding: 0px;
+}
+
 .product-intro {
   background-size: cover;
   background-position: center center;
@@ -18899,6 +18914,10 @@ nav.navbar {
   .contact .contact_content {
     border-left: 12px solid #000;
   }
+}
+
+.section-homepage {
+  background-color: black;
 }
 
 .home-hero {

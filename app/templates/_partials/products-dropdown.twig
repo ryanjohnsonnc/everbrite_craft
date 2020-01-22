@@ -1,0 +1,22 @@
+{# Create a category query with the 'group' parameter #}
+{% set productCategories = craft.categories()
+    .group('productCategories') %}
+
+{# Fetch the categories #}
+{% set categories = productCategories.all() %} 
+<div class="dropdown-menu v-1 z-depth-1 white mt-3 py-5 px-5" aria-labelledby="productDropdown">
+  <div class="container">
+    <div class="row">
+      {# Display the navigation #}
+      {% for category in categories %}
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="category-tile">
+            <a href="{{ category.url }}" class="cover-link"></a>
+            <img src="{{ category.productCategoryThumbnail.one.url}}" class="tile_image" />
+            <span class="tile_title">{{ category.title }}</span>
+          </div>
+        </div>  
+      {% endfor %}
+    </div>
+  </div>
+</div>
