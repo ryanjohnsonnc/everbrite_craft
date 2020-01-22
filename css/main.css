@@ -18034,6 +18034,52 @@ nav.navbar {
   padding: 1em 0;
 }
 
+.category-tile {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-tile .tile_image {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  max-width: none;
+}
+
+.category-tile .cover-link {
+  position: absolute;
+  z-index: 3;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.category-tile .tile_title {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 160px;
+  width: 100%;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 24px;
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 700;
+}
+
+.category-tile:hover .tile_image {
+  width: 106%;
+}
+
 .feature {
   background-color: #EEE;
   margin-bottom: 2rem;

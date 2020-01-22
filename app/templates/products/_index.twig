@@ -25,8 +25,12 @@
 
       {# Display the navigation #}
       {% for category in categories %}
-        <div class="col-md-6 col-lg-4">
-          <a href="{{ category.url }}">{{ category.title }}</a>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="category-tile">
+            <a href="{{ category.url }}" class="cover-link"></a>
+            <img src="{{ category.productCategoryThumbnail.one.url}}" class="tile_image" />
+            <span class="tile_title">{{ category.title }}</span>
+          </div>
         </div>  
       {% endfor %}
       

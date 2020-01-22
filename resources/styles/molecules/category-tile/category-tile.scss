@@ -1,0 +1,43 @@
+.category-tile {
+  position: relative;
+  overflow: hidden;
+
+  .tile_image {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    @include translate(-50%, -50%);
+    @include transition(all .5s ease);
+    max-width: none;
+  }
+
+  .cover-link {
+    position: absolute;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+  }
+  .tile_title {
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin-top: 160px;
+    width: 100%;
+    text-align: left;
+    background-color: rgba(black, .6);
+    color: white;
+    padding: 24px;
+    @include font-size(22);
+    font-weight: 700;
+  }
+
+  &:hover {
+    .tile_image {
+      width: 106%;
+    }
+  }
+}
