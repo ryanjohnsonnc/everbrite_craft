@@ -3,11 +3,11 @@
     <div class="hero_background-image" style="background-image: url({{background}});"></div>
     <div class="hero_background-gradient"></div>
   </div>
-  <div class="container pad--vertical">
+  <div class="container pad--vertical margin--top-half">
     <div class="col-md-8 col-lg-6 text-white hero_content">
-      <h1>{{ headline }}</h1>
+      <h1 data-aos="fade-up" data-aos-delay="250">{{ headline }}</h1>
       {% if subheadline is defined and subheadline|length %}
-        <p class="lead">{{ subheadline }}</p>
+        <p class="lead" data-aos="fade-up" data-aos-delay="500">{{ subheadline }}</p>
       {% endif %}
     </div>
   </div>

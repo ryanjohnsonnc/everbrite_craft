@@ -34,6 +34,16 @@ var $window = $(window),
     wh = $window.innerHeight,
     globalHeader = $('.navbar'),
     body = $('body');
+/* Initialize AOS */
+
+AOS.init({
+  offset: 200,
+  duration: 600,
+  easing: 'ease-in-sine',
+  delay: 0,
+  disable: 'mobile',
+  once: true
+});
 $window.on('load', function () {
   // Handles Sticky Nav
   $window.scroll(function () {
@@ -42,7 +52,8 @@ $window.on('load', function () {
     } else {
       globalHeader.removeClass('scrolled');
     }
-  }); // Handle Empty Link Clicks
+  });
+  AOS.refresh(); // Handle Empty Link Clicks
 
   $('a[href="#"]').on('click', function (e) {
     e.preventDefault;
@@ -136,6 +147,12 @@ function isOnScreen(elem) {
   var bottom = top + height;
   return top >= viewport_top && top < viewport_bottom || bottom > viewport_top && bottom <= viewport_bottom || height > viewport_height && top <= viewport_top && bottom >= viewport_bottom;
 }
+
+var scrollRef = 0;
+window.addEventListener('scroll', function () {
+  // increase value up to 10, then refresh AOS
+  scrollRef <= 10 ? scrollRef++ : AOS.refresh();
+});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js?d0be"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js?d0be"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js?d0be")))
 
 /***/ }),

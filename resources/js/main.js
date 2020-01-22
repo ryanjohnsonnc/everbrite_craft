@@ -9,12 +9,22 @@ import './plugins/tabs.plugin';
 import "bootstrap";
 window.$ = $;
 
+
 /* Global Variables */
 var $window      = $(window),
     wh           = $window.innerHeight,
     globalHeader = $('.navbar'),
     body         = $('body');
 
+/* Initialize AOS */
+AOS.init({
+  offset: 200,
+  duration: 600,
+  easing: 'ease-in-sine',
+  delay: 0,
+  disable: 'mobile',
+  once: true,
+});
 
 $window.on('load', function(){
   // Handles Sticky Nav
@@ -25,6 +35,8 @@ $window.on('load', function(){
       globalHeader.removeClass('scrolled');
     }
   });
+
+  AOS.refresh();
 
   // Handle Empty Link Clicks
   $('a[href="#"]').on('click', function(e) {
@@ -122,3 +134,12 @@ function isOnScreen(elem) {
 	(bottom > viewport_top && bottom <= viewport_bottom) ||
 	(height > viewport_height && top <= viewport_top && bottom >= viewport_bottom)
 }
+
+
+
+let scrollRef = 0;
+
+window.addEventListener('scroll', function() {
+  // increase value up to 10, then refresh AOS
+  scrollRef <= 10 ? scrollRef++ : AOS.refresh();
+});

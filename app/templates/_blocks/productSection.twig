@@ -12,11 +12,13 @@
     <div class="row align-items-center">
       {% if block.position == 'left' %}
         <div class="content pad--half col-md-6 color--white">
-          <h2 class="">
+          <h2 class="" data-aos="fade-up" data-aos-delay="0">
             {{ block.productTitle }}
           </h2>
 
-          {{ block.productContent }}
+          <div data-aos="fade-up" data-aos-delay="250">
+            {{ block.productContent }}
+          </div>
         </div>
         <div class="image col-md-6">
           {{ block.productImage.one.img }}
@@ -26,11 +28,13 @@
           {{ block.productImage.one.img }}
         </div>
         <div class="content pad--half col-md-6 color--white">
-          <h2 class="">
+          <h2 class="" data-aos="fade-up" data-aos-delay="0">
             {{ block.productTitle }}
           </h2>
 
-          {{ block.productContent }}
+          <div data-aos="fade-up" data-aos-delay="250">
+            {{ block.productContent }}
+          </div>
         </div>
       {% endif %}
     </div>

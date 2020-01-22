@@ -35,6 +35,10 @@
   padding-bottom: $global-spacing * 3 !important;
 }
 
+.pad--bottom-small {
+  padding-bottom: $global-spacing * 1.5 !important;
+}
+
 .pad--small {
   padding-top: $global-spacing * 1.5 !important;
   padding-bottom: $global-spacing * 1.5 !important;

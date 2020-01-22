@@ -10,17 +10,17 @@
 {% set textColor = block.textColor %}
 
 <section style="background-image: url({{backgroundImage}});" class="builder-section content-section two-column pad--vertical text-{{textColor}} background-{{backgroundColor}}">
-  <div class="container background--{{contentBg}}">
+  <div class="container background--{{contentBg}}" data-aos="fade-up" data-aos-delay="0">
     {% if block.sectionTitle %}
       <h2>
         {{ block.sectionTitle }}
       </h2>
     {% endif %}
     <div class="row">
-      <div class="content col-md-6">
+      <div class="content col-md-6" data-aos="fade-up" data-aos-delay="250">
         {{ block.leftContent }}
       </div>
-      <div class="content col-md-6">
+      <div class="content col-md-6" data-aos="fade-up" data-aos-delay="500">
         {{ block.rightContent }}
       </div>
     </div>

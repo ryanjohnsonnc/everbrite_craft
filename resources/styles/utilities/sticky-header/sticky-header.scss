@@ -17,7 +17,7 @@
 }
 
 @if $use-boilerplate-classes {
-    header.sticky {
+    nav.navbar {
         @include sticky-header;
     }
 }

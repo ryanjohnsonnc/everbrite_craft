@@ -54,7 +54,7 @@ categoryGroups:
               e72e6691-b2c5-41b9-b75e-56b6a7200933:
                 required: false
                 sortOrder: 1
-dateModified: 1576712873
+dateModified: 1579648893
 email:
   fromEmail: kevin@imarc.com
   fromName: Padstone
@@ -2455,27 +2455,30 @@ sections:
                 sortOrder: 1
                 fields:
                   1b530a37-a8f5-4acd-ae6c-de2a21fdf1e4:
-                    required: false
+                    required: true
                     sortOrder: 3
                   bf481ee2-fbb9-48e8-ad2f-53f93309d46a:
-                    required: false
+                    required: true
                     sortOrder: 2
                   e4f82bbc-4b35-44a7-a10b-3cd58146ca7e:
-                    required: false
+                    required: true
                     sortOrder: 1
               -
                 name: 'Product Intro'
                 sortOrder: 2
                 fields:
                   4e031b1d-eb8f-4453-90bc-165adf99fd49:
-                    required: false
+                    required: true
                     sortOrder: 1
                   908441b8-15e1-443a-b09b-5ab708e16eb0:
-                    required: false
+                    required: true
                     sortOrder: 3
                   c6dc8624-ac34-444f-b3b7-52051ef7a370:
-                    required: false
+                    required: true
                     sortOrder: 2
+                  fe9f15e5-2b68-477e-af16-c6e83c83e642:
+                    required: false
+                    sortOrder: 4
               -
                 name: 'Content Designer'
                 sortOrder: 3

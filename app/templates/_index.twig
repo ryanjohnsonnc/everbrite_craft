@@ -8,12 +8,21 @@
         placeholderImage: entry.heroPlaceholderImage.one.url
     } %}
 
-    {% include '_partials/product-intro' with {
-      title: entry.headline,
-      content: entry.defaultContent,
-      photos: entry.productPhotos.all()
-
-    } %}
+    {% if entry.blogFeaturedImage is defined and entry.blogFeaturedImage|length > 0 %}
+      {% include '_partials/product-intro' with {
+        title: entry.headline,
+        content: entry.defaultContent,
+        photos: entry.productPhotos.all(),
+        background: entry.blogFeaturedImage.one.url
+      } %}
+    {% else %}
+    
+      {% include '_partials/product-intro' with {
+        title: entry.headline,
+        content: entry.defaultContent,
+        photos: entry.productPhotos.all(),
+      } %}
+    {% endif %}
 
     {{ macros.renderAllBlocks(entry.designedContent, true) }}
 

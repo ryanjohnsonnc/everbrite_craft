@@ -71,6 +71,8 @@
 
         <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,900,700,700i&display=swap" rel="stylesheet"> 
 
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
         <link rel="stylesheet" href="{{ mix('/css/main.css') }}">
 
         {% if entry is defined and entry.headerCode %}
@@ -78,51 +80,53 @@
         {% endif %}
     </head>
     <body class="{{ bodyClasses|join(' ') }}" >
-      <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="/"><img src="resources/media/EverBrite-logo.png" class="site-logo"/></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+      <header class="primary">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top" data-aos="fade-down" data-aos-delay="0">
+          <div class="container">
+            <a class="navbar-brand" href="/"><img src="/resources/media/EverBrite-logo.png" class="site-logo"/></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
 
-          <div class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item {{ section == 'products' ? 'active' : '' }}">
-                {% set page = craft.entries.section('productsPage').one %}
-                <a class="nav-link" href="{{ page.url }}">
-                  Products
-                  {% if section == 'products' %}
-                    <span class="sr-only">(current)</span>
-                  {% endif %}
-                </a>
-              </li>
-              <li class="nav-item {{ section == 'blog' ? 'active' : '' }}">
-                {% set page = craft.entries.section('blogPage').one %}
-                <a class="nav-link" href="{{ page.url }}">
-                  {{ page.title }}
-                  {% if section == 'blog' %}
-                    <span class="sr-only">(current)</span>
-                  {% endif %}
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Promotions
-                </a>
-              </li>
-              <li class="nav-item {{ section == 'contactPage' ? 'active' : '' }}">
-                {% set page = craft.entries.section('contactPage').one %}
-                <a class="nav-link" href="{{ page.url }}">
-                  Contact
-                  {% if section == 'contactPage' %}
-                    <span class="sr-only">(current)</span>
-                  {% endif %}
-                </a>
-              </li>
-            </ul>
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item {{ section == 'products' ? 'active' : '' }}">
+                  {% set page = craft.entries.section('productsPage').one %}
+                  <a class="nav-link" href="{{ page.url }}">
+                    Products
+                    {% if section == 'products' %}
+                      <span class="sr-only">(current)</span>
+                    {% endif %}
+                  </a>
+                </li>
+                <li class="nav-item {{ section == 'blog' ? 'active' : '' }}">
+                  {% set page = craft.entries.section('blogPage').one %}
+                  <a class="nav-link" href="{{ page.url }}">
+                    {{ page.title }}
+                    {% if section == 'blog' %}
+                      <span class="sr-only">(current)</span>
+                    {% endif %}
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    Promotions
+                  </a>
+                </li>
+                <li class="nav-item {{ section == 'contactPage' ? 'active' : '' }}">
+                  {% set page = craft.entries.section('contactPage').one %}
+                  <a class="nav-link" href="{{ page.url }}">
+                    Contact
+                    {% if section == 'contactPage' %}
+                      <span class="sr-only">(current)</span>
+                    {% endif %}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
       <main role="main" class="">
         {% block content %}{% endblock %}
@@ -139,7 +143,7 @@
         </div>
       </footer>
 
-
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="{{ mix('/js/manifest.js') }}"></script>
       <script src="{{ mix('/js/vendor.js') }}"></script>
       <script src="{{ mix('/js/main.js') }}"></script>

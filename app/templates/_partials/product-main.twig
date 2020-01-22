@@ -1,7 +1,7 @@
 <section class="product-main pad--vertical">
-  <div class="container">
+  <div class="container margin--top-half">
     <div class="row align-items-start">
-      <div class="col-md-6 col-lg-7 product-main_images">
+      <div class="col-md-6 col-lg-7 product-main_images" data-aos="fade-up" data-aos-delay="250">
         {% set photos = entry.productPhotos.all() %}
         {% if photos|length %}
           <div class="product-main_carousel margin--bottom-small">
@@ -21,7 +21,7 @@
 
 
       </div>
-      <div class="col-md-6 col-lg-5 product-main_content">
+      <div class="col-md-6 col-lg-5 product-main_content" data-aos="fade-up" data-aos-delay="500">
         <h1 class="product-main_product-title">{{entry.title}}</h1>
         {{ entry.productDescription }}
       </div>

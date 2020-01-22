@@ -1,9 +1,13 @@
 .navbar {
   padding-top: 24px;
   padding-bottom: 24px;
-  background-color: transparent;
-  border-bottom: 1px solid $charcoal;
+  background-color: $charcoal;
   @include transition(all .3s ease);
+
+  .home & {
+    background-color: transparent;
+    border-bottom: 1px solid $charcoal;
+  }
 
   &.scrolled {
     background-color: white;
@@ -19,6 +23,10 @@
       li {
         a {
           color: $charcoal !important;
+
+          .home & {
+            color: $charcoal !important;
+          }
         }
       }
     }
@@ -46,6 +54,11 @@
           font-weight: $font-weight-bold;
           @include font-size(18);
           text-transform: uppercase;
+
+          .section-homepage & {
+            @include opacity(1);
+            color: white !important;
+          }
         }
       }
     }

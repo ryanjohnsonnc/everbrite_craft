@@ -8,17 +8,19 @@
 
     <div class="row align-items-center">
       {% if block.position == 'left' %}
-        <div class="col-md-6">
-          {{ block.image.one.img }}
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="0">
+          <div>
+            {{ block.image.one.img }}
+          </div>
         </div>
-        <div class="col-md-6 content">
+        <div class="col-md-6 content" data-aos="fade-up" data-aos-delay="250">
           {{ block.blockContent }}
         </div>
       {% else %}
-        <div class="col-md-6 content">
+        <div class="col-md-6 content" data-aos="fade-up" data-aos-delay="0">
           {{ block.blockContent }}
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
           {{ block.image.one.img }}
         </div>
       {% endif %}
