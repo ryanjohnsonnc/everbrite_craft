@@ -4,12 +4,12 @@
 
 {# Fetch the categories #}
 {% set categories = productCategories.all() %} 
-<div class="dropdown-menu v-1 z-depth-1 white mt-3 py-5 px-5" aria-labelledby="productDropdown">
+<div class="dropdown-menu v-1 z-depth-1 white mt-2 py-4 px-4" aria-labelledby="productDropdown">
   <div class="container">
     <div class="row">
       {# Display the navigation #}
       {% for category in categories %}
-        <div class="col-md-6 col-lg-4 mb-4">
+        <div class="col-md-6 col-lg-4 mt-4">
           <div class="category-tile">
             <a href="{{ category.url }}" class="cover-link"></a>
             <img src="{{ category.productCategoryThumbnail.one.url}}" class="tile_image" />
