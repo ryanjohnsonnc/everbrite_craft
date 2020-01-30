@@ -7,8 +7,7 @@
 /**
  * Give padding or margin to the top and bottom of things
  */
- 
- .pad--vertical {
+.pad--vertical {
   padding-top: $global-spacing * 6 !important;
   padding-bottom: $global-spacing * 6 !important;
 }

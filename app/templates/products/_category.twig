@@ -15,7 +15,7 @@
         {% endif %}
       </div>
     <div class="row">
-        {% for entry in craft.entries.section('products').relatedTo(category) %}
+        {% for entry in craft.entries.section('products').relatedTo(category).all() %}
           <div class="col-md-6 col-lg-4">
             {% include '_partials/product-tile' with {
               product: entry
