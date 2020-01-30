@@ -82,6 +82,19 @@ $window.on('load', function(){
     });
   };
 
+  // Image Carousel (.image-carousel)
+  var imageCarousel = $('.image-carousel');
+  if(imageCarousel.length) {
+    imageCarousel.slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      fade: true,
+      autoplay: true,
+    });
+  };
+
   // Product Intro Slider (.product-intro_slider)
   var productSlider = $('.product-intro_slider');
   if(productSlider.length) {

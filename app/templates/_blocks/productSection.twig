@@ -6,6 +6,12 @@
   {% set backgroundImage = '' %}
 {% endif %}
 
+{% set images = block.productImage
+  .kind('image')
+  .all() 
+%}
+
+
 <section style="background-image: url({{backgroundImage}});" class="builder-section product-section pad--vertical">
   <div class="container">
 
@@ -20,12 +26,20 @@
             {{ block.productContent }}
           </div>
         </div>
-        <div class="image col-md-6">
-          {{ block.productImage.one.img }}
+        <div class="image col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="image-carousel">
+            {% for image in images %}
+              <img src="{{ image.getUrl() }}" alt="{{ image.title }}">
+            {% endfor %}
+          </div>
         </div>
       {% else %}
-        <div class="image col-md-6">
-          {{ block.productImage.one.img }}
+        <div class="image col-md-6" data-aos="fade-up" data-aos-delay="500">
+          <div class="image-carousel">
+            {% for image in images %}
+              <img src="{{ image.getUrl() }}" alt="{{ image.title }}">
+            {% endfor %}
+          </div>
         </div>
         <div class="content pad--half col-md-6 color--white">
           <h2 class="color--primary" data-aos="fade-up" data-aos-delay="0">

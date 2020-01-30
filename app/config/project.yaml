@@ -54,7 +54,7 @@ categoryGroups:
               e72e6691-b2c5-41b9-b75e-56b6a7200933:
                 required: false
                 sortOrder: 1
-dateModified: 1580343387
+dateModified: 1580344668
 email:
   fromEmail: kevin@imarc.com
   fromName: Padstone
@@ -1161,7 +1161,7 @@ matrixBlockTypes:
       8458d470-e3d2-4976-972a-3d50902bb120:
         name: 'Product Image'
         handle: productImage
-        instructions: 'Please upload a transparent png on a canvas that is 1000 x 1000 pixels.'
+        instructions: 'Please upload transparent pngs on a canvas that is 1000 x 1000 pixels.'
         searchable: false
         translationMethod: site
         translationKeyFormat: null
@@ -1179,7 +1179,7 @@ matrixBlockTypes:
           source: null
           targetSiteId: null
           viewMode: list
-          limit: '1'
+          limit: ''
           selectionLabel: ''
           localizeRelations: false
         contentColumnType: string
