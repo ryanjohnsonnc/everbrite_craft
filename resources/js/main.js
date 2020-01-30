@@ -86,7 +86,7 @@ $window.on('load', function(){
   var productSlider = $('.product-intro_slider');
   if(productSlider.length) {
     productSlider.slick({
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
       arrows: false,
       dots: true,

@@ -3,7 +3,7 @@
   background-position: center center;
   background-attachment: fixed;
   .row {
-    background-color: rgba($black, .6);
+    //background-color: rgba($black, .6);
     padding: 24px;
 
     @include breakpoint(lg) {

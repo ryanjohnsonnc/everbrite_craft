@@ -32,6 +32,8 @@
   text-align: center;
   vertical-align: top;
   border-radius: 0px;
+  @include font-size(22);
+  text-transform: uppercase;
 
   &:hover,
   &:focus {
@@ -55,4 +57,17 @@
 
 .btn {
   @include button;
+}
+
+.btn-hollow {
+  background-color: transparent;
+  border: 2px solid $color-primary;
+  color: $color-primary;
+
+  &:hover, &:focus {
+    background-color: $color-primary;
+    color: white;
+    outline: none;
+    border-color: $color-primary;
+  }
 }

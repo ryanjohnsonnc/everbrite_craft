@@ -54,7 +54,7 @@ categoryGroups:
               e72e6691-b2c5-41b9-b75e-56b6a7200933:
                 required: false
                 sortOrder: 1
-dateModified: 1579648893
+dateModified: 1580343387
 email:
   fromEmail: kevin@imarc.com
   fromName: Padstone
@@ -692,6 +692,23 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Entries
+  b7f9e38e-9c46-4f64-8ed9-6691693a5392:
+    name: 'Hero Headline'
+    handle: heroHeadline
+    instructions: ''
+    searchable: true
+    translationMethod: none
+    translationKeyFormat: null
+    type: craft\fields\PlainText
+    settings:
+      placeholder: ''
+      code: ''
+      multiline: ''
+      initialRows: '4'
+      charLimit: ''
+      columnType: text
+    contentColumnType: text
+    fieldGroup: 1cd65752-f86f-48a3-9924-90919c9ca915
   bf481ee2-fbb9-48e8-ad2f-53f93309d46a:
     name: 'Hero Video'
     handle: heroVideo
@@ -2457,6 +2474,9 @@ sections:
                   1b530a37-a8f5-4acd-ae6c-de2a21fdf1e4:
                     required: true
                     sortOrder: 3
+                  b7f9e38e-9c46-4f64-8ed9-6691693a5392:
+                    required: true
+                    sortOrder: 4
                   bf481ee2-fbb9-48e8-ad2f-53f93309d46a:
                     required: true
                     sortOrder: 2
@@ -2476,9 +2496,6 @@ sections:
                   c6dc8624-ac34-444f-b3b7-52051ef7a370:
                     required: true
                     sortOrder: 2
-                  fe9f15e5-2b68-477e-af16-c6e83c83e642:
-                    required: false
-                    sortOrder: 4
               -
                 name: 'Content Designer'
                 sortOrder: 3

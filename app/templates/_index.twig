@@ -5,7 +5,8 @@
     {% include '_partials/home-hero' with {
         backgroundVideo: entry.heroBackgroundVideo,
         video: entry.heroVideo,
-        placeholderImage: entry.heroPlaceholderImage.one.url
+        placeholderImage: entry.heroPlaceholderImage.one.url,
+        headline: entry.heroHeadline
     } %}
 
     {% if entry.blogFeaturedImage is defined and entry.blogFeaturedImage|length > 0 %}
