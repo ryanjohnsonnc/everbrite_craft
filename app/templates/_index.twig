@@ -24,6 +24,30 @@
         photos: entry.productPhotos.all(),
       } %}
     {% endif %}
+  
+
+    {% set productBlocks =  entry.designedContent.all()%}
+    {% set iconSize = {
+      mode: 'crop',
+      width: 50,
+      height: 50,
+      quality: 100,
+      position: 'center-center'
+    } %}
+    <nav id="product-nav">
+      <ul class="nav flex-column">
+        {% for item in productBlocks %}  
+          <li class="nav-item p-0 m-0">
+            {% if item.type == "productSection" %}
+              {% set icon = item.thumbnails.one() %}
+              <a class="nav-link" href="#{{ item.productTitle|kebab }}">
+                <img class="mb-0" src="{{ icon.getUrl(iconSize) }}" width="{{ icon.getWidth(iconSize) }}" height="{{ icon.getHeight(iconSize) }}">
+              </a>
+            {% endif %}   
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
 
     {{ macros.renderAllBlocks(entry.designedContent, true) }}
 

@@ -18772,6 +18772,8 @@ nav.navbar {
 }
 
 .product-intro {
+  position: relative;
+  z-index: 200;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -18941,6 +18943,7 @@ nav.navbar {
 
 .home-hero {
   position: relative;
+  z-index: 200;
   height: calc(100vh - 0px);
   width: 100vw;
   background-size: cover;
@@ -19000,6 +19003,29 @@ nav.navbar {
   font-weight: normal;
   color: #fff;
   opacity: 1;
+}
+
+#product-nav {
+  display: block;
+  position: fixed;
+  top: 120px;
+  right: 30px;
+  z-index: 100;
+}
+
+#product-nav .nav-item .nav-link {
+  padding: 12px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  background-color: white;
+  border: 2px solid #808080;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+#product-nav .nav-item .nav-link.active,
+#product-nav .nav-item .nav-link:hover {
+  background-color: #f69c00;
 }
 
 .blog_article {

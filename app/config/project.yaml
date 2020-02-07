@@ -54,7 +54,7 @@ categoryGroups:
               e72e6691-b2c5-41b9-b75e-56b6a7200933:
                 required: false
                 sortOrder: 1
-dateModified: 1580344668
+dateModified: 1581117013
 email:
   fromEmail: kevin@imarc.com
   fromName: Padstone
@@ -1212,7 +1212,7 @@ matrixBlockTypes:
         contentColumnType: string
         fieldGroup: null
       cf3e21c0-4e35-4973-b1ea-578dce50736b:
-        name: Thumbnails
+        name: Thumbnail
         handle: thumbnails
         instructions: ''
         searchable: true
@@ -1232,7 +1232,7 @@ matrixBlockTypes:
           source: null
           targetSiteId: null
           viewMode: list
-          limit: '5'
+          limit: '1'
           selectionLabel: 'Add thumbnails'
           localizeRelations: false
         contentColumnType: string

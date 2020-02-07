@@ -43,6 +43,13 @@ $window.on('load', function(){
     e.preventDefault;
   });
 
+  $('.nav-link').click(function() {
+    var sectionTo = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(sectionTo).offset().top
+    }, 1500);
+});
+
   // Product Photos Slider
   var productSlider = $('.product-main_carousel');
   var productNav    = $('.product-main_nav');

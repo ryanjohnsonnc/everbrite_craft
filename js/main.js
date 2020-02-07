@@ -57,6 +57,12 @@ $window.on('load', function () {
 
   $('a[href="#"]').on('click', function (e) {
     e.preventDefault;
+  });
+  $('.nav-link').click(function () {
+    var sectionTo = $(this).attr('href');
+    $('html, body').animate({
+      scrollTop: $(sectionTo).offset().top
+    }, 1500);
   }); // Product Photos Slider
 
   var productSlider = $('.product-main_carousel');
