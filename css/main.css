@@ -18697,6 +18697,8 @@ nav.navbar {
   background-color: #191919;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  z-index: 800 !important;
+  position: relative;
 }
 
 .home .navbar {
@@ -18773,7 +18775,7 @@ nav.navbar {
 
 .product-intro {
   position: relative;
-  z-index: 200;
+  z-index: 180;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
@@ -19627,6 +19629,10 @@ table tr:nth-child(even) td {
     orphans: 3;
     widows: 3;
   }
+}
+
+header.primary {
+  z-index: 190;
 }
 
 

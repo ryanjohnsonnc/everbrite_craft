@@ -3,6 +3,8 @@
   padding-bottom: 24px;
   background-color: $charcoal;
   @include transition(all .3s ease);
+  z-index: 800 !important;
+  position: relative;
 
   .home & {
     background-color: transparent;

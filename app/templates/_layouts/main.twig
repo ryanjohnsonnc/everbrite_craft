@@ -82,56 +82,56 @@
         {% endif %}
     </head>
     <body class="{{ bodyClasses|join(' ') }}" data-spy="scroll" data-target="#product-nav">
-      <header class="primary">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-aos="fade-down" data-aos-delay="0">
-          <div class="container">
-            <a class="navbar-brand" href="/"><img src="/resources/media/EverBrite-logo.png" class="site-logo"/></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" data-aos="fade-down" data-aos-delay="0">
+        <div class="container">
+          <a class="navbar-brand" href="/"><img src="/resources/media/EverBrite-logo.png" class="site-logo"/></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-            <div class="collapse navbar-collapse">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item {{ section == 'products' ? 'active' : '' }} dropdown mega-menu">
-                  {% set page = craft.entries.section('productsPage').one %}
-                  <a class="nav-link dropdown-toggle mega-dropdown" href="{{ page.url }}" id="productDrodown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Products
-                    {% if section == 'products' %}
-                      <span class="sr-only">(current)</span>
-                    {% endif %}
-                  </a>
-                  {% include '_partials/products-dropdown' %}
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item {{ section == 'products' ? 'active' : '' }} dropdown mega-menu">
+                {% set page = craft.entries.section('productsPage').one %}
+                <a class="nav-link dropdown-toggle mega-dropdown" href="{{ page.url }}" id="productDrodown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Products
+                  {% if section == 'products' %}
+                    <span class="sr-only">(current)</span>
+                  {% endif %}
+                </a>
+                {% include '_partials/products-dropdown' %}
 
-                </li>
-                
-                <li class="nav-item {{ section == 'blog' ? 'active' : '' }}">
-                  {% set page = craft.entries.section('blogPage').one %}
-                  <a class="nav-link" href="{{ page.url }}">
-                    {{ page.title }}
-                    {% if section == 'blog' %}
-                      <span class="sr-only">(current)</span>
-                    {% endif %}
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    Promotions
-                  </a>
-                </li>
-                <li class="nav-item {{ section == 'contactPage' ? 'active' : '' }}">
-                  {% set page = craft.entries.section('contactPage').one %}
-                  <a class="nav-link" href="{{ page.url }}">
-                    Contact
-                    {% if section == 'contactPage' %}
-                      <span class="sr-only">(current)</span>
-                    {% endif %}
-                  </a>
-                </li>
-              </ul>
-            </div>
+              </li>
+              
+              <li class="nav-item {{ section == 'blog' ? 'active' : '' }}">
+                {% set page = craft.entries.section('blogPage').one %}
+                <a class="nav-link" href="{{ page.url }}">
+                  {{ page.title }}
+                  {% if section == 'blog' %}
+                    <span class="sr-only">(current)</span>
+                  {% endif %}
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Promotions
+                </a>
+              </li>
+              <li class="nav-item {{ section == 'contactPage' ? 'active' : '' }}">
+                {% set page = craft.entries.section('contactPage').one %}
+                <a class="nav-link" href="{{ page.url }}">
+                  Contact
+                  {% if section == 'contactPage' %}
+                    <span class="sr-only">(current)</span>
+                  {% endif %}
+                </a>
+              </li>
+            </ul>
           </div>
-        </nav>
-      </header>
+        </div>
+      </nav>
+      
 
       <main role="main" class="">
         {% block content %}{% endblock %}
