@@ -11,6 +11,8 @@ html {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased; /* Chrome, Safari */
+    -moz-osx-font-smoothing: grayscale; /* Firefox */
 }
 
 *,
@@ -54,7 +56,7 @@ h5 {
   font-weight: 800 !important;
   line-height: 1.3;
   margin: 0 0 .6em;
-  font-family: $font-stack;
+  font-family: $header-font-stack;
 
   &:last-child {
     margin-bottom: 0px;

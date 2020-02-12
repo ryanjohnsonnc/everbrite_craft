@@ -17618,7 +17618,7 @@ nav.navbar {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-weight: bold;
   margin-bottom: 0;
   padding: 0.4rem 1rem;
@@ -17649,7 +17649,7 @@ nav.navbar {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-weight: bold;
   margin-bottom: 0;
   padding: 0.4rem 1rem;
@@ -18745,7 +18745,7 @@ nav.navbar {
   }
 
   .navbar .navbar-nav li a {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 18px;
     font-size: 1.125rem;
     text-transform: uppercase;
@@ -18943,10 +18943,23 @@ nav.navbar {
   background-color: black;
 }
 
+.arrow-down {
+  color: white;
+  position: absolute;
+  bottom: -90px;
+  left: calc(50% - 13px);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url(/images/arrow-down.svg?c6cc719f2f7f252a9a9324d109ddb643);
+}
+
 .home-hero {
   position: relative;
   z-index: 200;
-  height: calc(100vh - 0px);
+  min-height: calc(100vh - 0px);
   width: 100vw;
   background-size: cover;
   background-position: center center;
@@ -19164,7 +19177,7 @@ nav.navbar {
 }
 
 .builder-section.product-section .content {
-  background-color: rgba(128, 128, 128, 0.4);
+  background-color: rgba(128, 128, 128, 0.7);
   border-right: 8px solid #f69c00;
 }
 
@@ -19244,11 +19257,15 @@ html {
   box-sizing: border-box;
   background-color: #FFF;
   color: #191919;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-size: 100%;
   line-height: 1.5;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  /* Chrome, Safari */
+  -moz-osx-font-smoothing: grayscale;
+  /* Firefox */
 }
 
 *,
@@ -19263,7 +19280,7 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
 }
 
 .container {
@@ -19296,7 +19313,7 @@ h5 {
   font-weight: 800 !important;
   line-height: 1.3;
   margin: 0 0 0.6em;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: Impact, Arial, sans-serif;
 }
 
 h1:last-child,
@@ -19387,7 +19404,7 @@ a[disabled] {
 p {
   margin: 0 0 2em;
   padding: 0;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   font-size: 18px;
   font-size: 1.125rem;
   line-height: 1.5em;
@@ -19513,7 +19530,7 @@ textarea {
   box-sizing: border-box;
   color: #191919;
   display: block;
-  font-family: "Work Sans", Arial, sans-serif;
+  font-family: "Lato", Arial, sans-serif;
   margin: 0;
   padding: 0.4rem 0.6rem;
   width: 100%;

@@ -26,7 +26,7 @@
     {% endif %}
   
 
-    {% set productBlocks =  entry.designedContent.all()%}
+    {# {% set productBlocks =  entry.designedContent.all()%}
     {% set iconSize = {
       mode: 'crop',
       width: 50,
@@ -47,7 +47,7 @@
           </li>
         {% endfor %}
       </ul>
-    </nav>
+    </nav> #}
 
     {{ macros.renderAllBlocks(entry.designedContent, true) }}
 

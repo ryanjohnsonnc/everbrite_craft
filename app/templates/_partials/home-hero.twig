@@ -3,13 +3,14 @@
     <iframe src="https://player.vimeo.com/video/{{ backgroundVideo }}?background=1&autopause=0&autoplay=1&loop=1&byline=0&title=0"
            frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
   </div>
-  <div class="container align-self-end margin--vertical pad--vertical">
+  <div class="container align-self-center align-self-middle margin--vertical">
     <div class="row">
       <div class="pad--top col-md-8 offset-md-2 text-center">
         <h1 class="color--white margin--bottom">{{headline}}</h1>
-        <button data-aos="fade-up" data-aos-delay="3000" type="button" class="btn btn-primary btn-hollow video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/{{ video }}?badge=0" data-target="#videoModal">
+        <button data-aos="fade-up" data-aos-delay="3000" type="button" class="btn arrow-anchor btn-primary btn-hollow video-btn" data-toggle="modal" data-src="https://player.vimeo.com/video/{{ video }}?badge=0" data-target="#videoModal">
           Play Video
         </button>
+        <a class="nav-link" href="#product-intro"><i data-aos="fade-down" data-aos-delay="3500" class="arrow-down" data-aos-anchor=".home-hero"></i></a>
       </div>
     </div>
   </div>

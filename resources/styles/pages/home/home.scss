@@ -2,10 +2,24 @@
   background-color: black;
 }
 
+.arrow-down {
+  color: white;
+  position: absolute;
+  bottom: -90px;
+  left: calc(50% -  13px);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../resources/media/arrow-down.svg');
+  
+}
+
 .home-hero {
   position: relative;
   z-index: 200;
-  height: calc(100vh - 0px);
+  min-height: calc(100vh - 0px);
   width: 100vw;
   background-size: cover;
   background-position: center center;
