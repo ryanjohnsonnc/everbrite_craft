@@ -54,11 +54,20 @@ categoryGroups:
               e72e6691-b2c5-41b9-b75e-56b6a7200933:
                 required: false
                 sortOrder: 1
-dateModified: 1581117013
+dateModified: 1581610770
 email:
-  fromEmail: kevin@imarc.com
-  fromName: Padstone
-  transportType: craft\mail\transportadapters\Sendmail
+  fromEmail: rmjohnson1989@gmail.com
+  fromName: Everbrite
+  template: null
+  transportType: craft\mail\transportadapters\Smtp
+  transportSettings:
+    host: smtp-relay.sendinblue.com
+    port: '587'
+    useAuthentication: '1'
+    username: ryan@echodistrict.com
+    password: BfNK1gtAn57IQ6MZ
+    encryptionMethod: ''
+    timeout: '10'
 fieldGroups:
   1ade9565-fa45-459f-9e76-5b9ffe78d11f:
     name: Contact
@@ -967,6 +976,20 @@ fields:
     translationKeyFormat: null
     translationMethod: site
     type: craft\fields\Assets
+globalSets:
+  b1f0c1aa-6d0d-4445-9cbe-2a95e7617fc4:
+    name: 'Contact Info'
+    handle: contactInfo
+    fieldLayouts:
+      f29da29f-5294-4bd5-9ba4-567ce429b7a0:
+        tabs:
+          -
+            name: Contact
+            sortOrder: 1
+            fields:
+              f32a7d54-1637-44f0-91a4-e71328ea872b:
+                required: true
+                sortOrder: 1
 matrixBlockTypes:
   318e27c6-9622-4e58-9013-b8731641271f:
     field: 7ccca481-afc6-4d2d-a691-46d51885c73e
@@ -1963,7 +1986,12 @@ plugins:
     enabled: '1'
     licenseKey: null
     schemaVersion: 1.0.0
-    settings: null
+    settings:
+      toEmail: ryanjohnson1989@me.com
+      prependSender: 'On behalf of'
+      prependSubject: 'New message from Everbrite'
+      allowAttachments: ''
+      successFlashMessage: 'Your message has been sent.'
   contact-form-honeypot:
     enabled: '1'
     licenseKey: null

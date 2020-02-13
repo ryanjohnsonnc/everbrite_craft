@@ -3,6 +3,7 @@
     padding-bottom: 64px;
   }
   .contact_content {
+    padding: 60px;
     @include breakpoint(md) { 
       border-left: 12px solid $black;
     }

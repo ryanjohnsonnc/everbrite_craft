@@ -18933,6 +18933,10 @@ nav.navbar {
   }
 }
 
+.contact .contact_content {
+  padding: 60px;
+}
+
 @media screen and (min-width: 576px) {
   .contact .contact_content {
     border-left: 12px solid #000;
