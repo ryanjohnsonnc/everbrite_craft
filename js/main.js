@@ -125,11 +125,11 @@ $window.on('load', function () {
 
   if (productSlider.length) {
     productSlider.slick({
-      slidesToShow: 2,
+      slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      dots: true,
-      fade: false,
+      dots: false,
+      fade: true,
       autoplay: true
     }); // Handling Video Modals
 

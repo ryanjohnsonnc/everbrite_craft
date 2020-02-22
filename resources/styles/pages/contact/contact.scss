@@ -1,6 +1,11 @@
 .contact {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('../resources/media/line-texture.png');
+  background-attachment: fixed;
   @include breakpoint(md) {
-    padding-bottom: 64px;
+
   }
   .contact_content {
     padding: 60px;

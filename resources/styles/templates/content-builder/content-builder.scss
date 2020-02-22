@@ -104,8 +104,8 @@
     background-attachment: fixed;
     .content {
       @include content-padding;
-      background-color: rgba($gray, .7);
-      border-right: 8px solid $color-primary;
+      background-color: rgba($black, .4);
+      border-left: 8px solid $color-primary;
     }
   }
 }

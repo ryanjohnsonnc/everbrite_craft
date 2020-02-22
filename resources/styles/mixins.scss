@@ -177,20 +177,16 @@
 // Content Padding when in 50/50 Columns
 @mixin content-padding {
   @include breakpoint(md) {
-    &:nth-of-type(even) {
-      padding-left: 48px;
-    }
-    &:nth-of-type(odd) {
-      padding-right: 48px;
-    }
+    padding-left: 36px;
+    padding-right: 36px;
   }
 
   @include breakpoint(lg) {
-    &:nth-of-type(even) {
-      padding-left: 64px;
-    }
-    &:nth-of-type(odd) {
-      padding-right: 64px;
-    }
+    // &:nth-of-type(even) {
+    //   padding-left: 64px;
+    // }
+    // &:nth-of-type(odd) {
+    //   padding-right: 64px;
+    // }
   }
 }
