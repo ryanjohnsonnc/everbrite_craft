@@ -100,9 +100,10 @@ $window.on('load', function(){
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
-      dots: false,
-      fade: true,
+      dots: true,
+      fade: false,
       autoplay: true,
+      autoplaySpeed: 3500,
     });
   };
 
@@ -144,6 +145,7 @@ $window.on('load', function(){
       autoplay: true,
       pauseOnFocus: false,
       pauseOnHover: false,
+      cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
     });
     
    });
