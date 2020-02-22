@@ -19162,9 +19162,12 @@ nav.navbar {
 .builder-section.product-section {
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
 }
 
 .builder-section.product-section .content {
+  position: relative;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.4);
   border-left: 8px solid #f69c00;
 }
@@ -19174,6 +19177,78 @@ nav.navbar {
     padding-left: 36px;
     padding-right: 36px;
   }
+}
+
+.builder-section.product-section .image {
+  position: relative;
+  z-index: 2;
+}
+
+.builder-section.product-section .product-section_toggle {
+  position: absolute;
+  z-index: 3;
+  top: 30px;
+  left: 30px;
+  height: 60px;
+  width: 60px;
+  background-image: url(/images/eye-open-icon.svg?38833bec59f89e4697d709ccdedf0609);
+  background-size: 40px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.builder-section.product-section .product-section_toggle.eye-closed {
+  background-image: url(/images/eye-closed-icon.svg?6afac993d2ae5ab94d1b41337c76781f);
+}
+
+.builder-section.product-section .product-section_info {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.builder-section.product-section .product-section_info.invisible {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.builder-section.product-section .product-section_background {
+  position: absolute;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.builder-section.product-section .product-section_background .product-section_background-slider {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.builder-section.product-section .product-section_background .product-section_background-slider .slick-slide,
+.builder-section.product-section .product-section_background .product-section_background-slider .slick-track,
+.builder-section.product-section .product-section_background .product-section_background-slider .slick-list {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+
+.builder-section.product-section .product-section_background .slide {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .listing {

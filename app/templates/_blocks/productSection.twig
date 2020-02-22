@@ -1,9 +1,9 @@
 
 {% if block.backgroundImage is defined and block.backgroundImage|length > 0 %}
-  {% set backgroundImage = block.backgroundImage.one.url %}
+  {% set backgroundImages = block.backgroundImage.all() %}
 
 {% else %}
-  {% set backgroundImage = '' %}
+  {% set backgroundImages = '' %}
 {% endif %}
 
 {% set images = block.productImage
@@ -12,10 +12,20 @@
 %}
 
 
-<section id="{{ block.productTitle|kebab }}" style="background-image: url({{backgroundImage}});" class="builder-section product-section pad--vertical">
+<section id="{{ block.productTitle|kebab }}" class="builder-section product-section pad--vertical">
+  <div class="product-section_background">
+    <div class="product-section_background-slider">
+      {% for image in backgroundImages %}
+        <div class="slide" style="background-image: url({{ image.url }});"></div>
+      {% endfor %}
+    </div>
+  </div>
+  <a data-aos="flip-up" data-aos-delay="1500" href="#" class="product-section_toggle" data-toggle="tooltip" data-placement="right" title="Click to view the background images"></a>
+
+
   <div class="container">
 
-    <div class="row align-items-center">
+    <div class="row align-items-center product-section_info toggleable">
       {% if block.position == 'left' %}
         <div class="content pad--half col-md-6 color--white">
           <h2 class="color--primary" data-aos="fade-up" data-aos-delay="0">
@@ -24,6 +34,8 @@
 
           <div data-aos="fade-up" data-aos-delay="250">
             {{ block.productContent }}
+
+            <a class="btn btn-primary" href="{{ block.productCategoryLink }}">Shop Now</a>
           </div>
         </div>
         <div class="image col-md-6" data-aos="fade-up" data-aos-delay="500">
@@ -48,6 +60,9 @@
 
           <div data-aos="fade-up" data-aos-delay="250">
             {{ block.productContent }}
+
+            <a class="btn btn-primary" href="{{ block.productCategoryLink }}">Shop Now</a>
+
           </div>
         </div>
       {% endif %}

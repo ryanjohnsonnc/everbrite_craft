@@ -44,6 +44,9 @@ AOS.init({
   disable: 'mobile',
   once: true
 });
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});
 $window.on('load', function () {
   // Handles Sticky Nav
   $window.scroll(function () {
@@ -130,26 +133,50 @@ $window.on('load', function () {
       arrows: false,
       dots: false,
       fade: true,
-      autoplay: true
-    }); // Handling Video Modals
-
-    var $videoSrc;
-    $('.video-btn').click(function () {
-      $videoSrc = $(this).data("src");
-    }); // when the modal is opened autoplay it  
-
-    $('#videoModal').on('shown.bs.modal', function (e) {
-      // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
-      $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-    }); // stop playing the youtube video when I close the modal
-
-    $('#videoModal').on('hide.bs.modal', function (e) {
-      // a poor man's stop video
-      $("#video").attr('src', $videoSrc);
+      autoplay: true,
+      pauseOnFocus: false,
+      pauseOnHover: false
     });
   }
 
-  ;
+  ; // Product Section Background (.product-section_background-slider)
+
+  var productSlider = $('.product-section_background-slider');
+  productSlider.each(function () {
+    var productSection = $(this).parent().parent();
+    var toggle = productSection.find('.product-section_toggle');
+    var toggleTarget = productSection.find('.toggleable');
+    toggle.click(function (e) {
+      e.preventDefault();
+      toggleTarget.toggleClass('invisible');
+      $(this).toggleClass('eye-closed');
+    });
+    $(this).slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: false,
+      fade: true,
+      autoplay: true,
+      pauseOnFocus: false,
+      pauseOnHover: false
+    });
+  }); // Handling Video Modals
+
+  var $videoSrc;
+  $('.video-btn').click(function () {
+    $videoSrc = $(this).data("src");
+  }); // when the modal is opened autoplay it  
+
+  $('#videoModal').on('shown.bs.modal', function (e) {
+    // set the video src to autoplay and not to show related video. Youtube related video is like a box of chocolates... you never know what you're gonna get
+    $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+  }); // stop playing the youtube video when I close the modal
+
+  $('#videoModal').on('hide.bs.modal', function (e) {
+    // a poor man's stop video
+    $("#video").attr('src', $videoSrc);
+  });
 });
 
 function isOnScreen(elem) {

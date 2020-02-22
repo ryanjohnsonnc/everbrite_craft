@@ -54,7 +54,7 @@ categoryGroups:
               e72e6691-b2c5-41b9-b75e-56b6a7200933:
                 required: false
                 sortOrder: 1
-dateModified: 1581610770
+dateModified: 1582397047
 email:
   fromEmail: rmjohnson1989@gmail.com
   fromName: Everbrite
@@ -1181,6 +1181,54 @@ matrixBlockTypes:
           columnType: text
         contentColumnType: text
         fieldGroup: null
+      2f69856d-feb8-4269-96dc-d4c8c3de5140:
+        name: 'Product Category Link'
+        handle: productCategoryLink
+        instructions: ''
+        searchable: true
+        translationMethod: none
+        translationKeyFormat: null
+        type: typedlinkfield\fields\LinkField
+        settings:
+          allowCustomText: ''
+          allowedLinkNames:
+            2: category
+            3: entry
+          allowTarget: ''
+          autoNoReferrer: ''
+          defaultLinkName: asset
+          defaultText: ''
+          enableAriaLabel: ''
+          enableTitle: ''
+          typeSettings:
+            asset:
+              sources: '*'
+              allowCustomQuery: ''
+            category:
+              sources: '*'
+              allowCustomQuery: ''
+            entry:
+              sources: '*'
+              allowCustomQuery: ''
+            site:
+              sites: '*'
+            user:
+              sources: '*'
+              allowCustomQuery: ''
+            custom:
+              disableValidation: ''
+              allowAliases: ''
+            email:
+              disableValidation: ''
+              allowAliases: ''
+            tel:
+              disableValidation: ''
+              allowAliases: ''
+            url:
+              disableValidation: ''
+              allowAliases: ''
+        contentColumnType: text
+        fieldGroup: null
       8458d470-e3d2-4976-972a-3d50902bb120:
         name: 'Product Image'
         handle: productImage
@@ -1210,7 +1258,7 @@ matrixBlockTypes:
       a5ea602c-0aff-4e2e-905a-2016136d168c:
         name: 'Background Image'
         handle: backgroundImage
-        instructions: ''
+        instructions: 'Please add images to cycle through as the background of this section.'
         searchable: false
         translationMethod: site
         translationKeyFormat: null
@@ -1229,8 +1277,8 @@ matrixBlockTypes:
           source: null
           targetSiteId: null
           viewMode: list
-          limit: '1'
-          selectionLabel: 'Add a background image'
+          limit: ''
+          selectionLabel: 'Add background images'
           localizeRelations: false
         contentColumnType: string
         fieldGroup: null
@@ -1294,6 +1342,9 @@ matrixBlockTypes:
               15d039b2-25e1-47f1-a5d1-f2d8e85a6587:
                 required: true
                 sortOrder: 4
+              2f69856d-feb8-4269-96dc-d4c8c3de5140:
+                required: true
+                sortOrder: 7
               8458d470-e3d2-4976-972a-3d50902bb120:
                 required: true
                 sortOrder: 2

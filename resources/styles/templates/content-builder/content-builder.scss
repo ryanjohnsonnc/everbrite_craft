@@ -102,10 +102,80 @@
   &.product-section {
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
     .content {
+      position: relative;
+      z-index: 2;
       @include content-padding;
       background-color: rgba($black, .4);
       border-left: 8px solid $color-primary;
+    }
+
+    .image {
+      position: relative;
+      z-index: 2;
+    }
+
+    .product-section_toggle {
+      position: absolute;
+      z-index: 3;
+      top: 30px;
+      left: 30px;
+      height: 60px;
+      width: 60px;
+      background-image: url('../resources/media/eye-open-icon.svg');
+      background-size: 40px;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      &.eye-closed {
+        background-image: url('../resources/media/eye-closed-icon.svg');
+      }
+    }
+
+    .product-section_info {
+      @include opacity(1);
+      @include transition(all .3s ease);
+
+      &.invisible {
+        @include opacity(0);
+      }
+    }
+
+    .product-section_background {
+      position: absolute;
+      z-index: 1;
+      top: 0px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+
+      .product-section_background-slider {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+
+        .slick-slide, .slick-track, .slick-list {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+        }
+      }
+
+      .slide {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
     }
   }
 }
