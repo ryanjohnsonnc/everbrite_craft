@@ -26,4 +26,8 @@
     </div>
   </section>
 
+  {% if entry.designedContent %}
+      {{ macros.renderAllBlocks(entry.designedContent) }}
+  {% endif %}
+
 {% endblock %}

@@ -33,7 +33,7 @@
 
   &.call-to-action {
     position: relative;
-    background-attachment: initial;
+    background-attachment: fixed;
     &:after {
       content: '';
       display: block;
@@ -100,9 +100,8 @@
   }
   
   &.product-section {
-    background-size: cover;
-    background-attachment: fixed;
     position: relative;
+    overflow: hidden;
     .content {
       position: relative;
       z-index: 2;
@@ -143,12 +142,17 @@
     }
 
     .product-section_background {
-      position: absolute;
+      position: -webkit-sticky;
+      position: -moz-sticky;
+      position: -ms-sticky;
+      position: -o-sticky;
+
       z-index: 1;
       top: 0px;
       left: 0px;
       right: 0px;
       bottom: 0px;
+      background-attachment: fixed;
 
       .product-section_background-slider {
         position: absolute;
@@ -156,6 +160,7 @@
         left: 0px;
         right: 0px;
         bottom: 0px;
+        background-attachment: fixed;
 
         .slick-slide, .slick-track, .slick-list {
           position: absolute;
@@ -163,6 +168,21 @@
           left: 0px;
           right: 0px;
           bottom: 0px;
+          background-attachment: fixed;
+        }
+
+        .slick-slide {
+          & > div {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+          }
         }
       }
 
@@ -175,7 +195,21 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        
+
+        &:before {
+          display: block;
+          content:'';
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          background-color: rgba(black, .2);
+        }
       }
     }
+  
+    
   }
 }

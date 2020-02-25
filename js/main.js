@@ -203,7 +203,7 @@ window.addEventListener('scroll', function () {
   // increase value up to 10, then refresh AOS
   scrollRef <= 10 ? scrollRef++ : AOS.refresh();
 });
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js?d0be"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js?d0be"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js?d0be")))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js-exposed"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js-exposed"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js-exposed")))
 
 /***/ }),
 

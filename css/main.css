@@ -19089,7 +19089,7 @@ nav.navbar {
 
 .builder-section.call-to-action {
   position: relative;
-  background-attachment: initial;
+  background-attachment: fixed;
 }
 
 .builder-section.call-to-action:after {
@@ -19160,9 +19160,8 @@ nav.navbar {
 }
 
 .builder-section.product-section {
-  background-size: cover;
-  background-attachment: fixed;
   position: relative;
+  overflow: hidden;
 }
 
 .builder-section.product-section .content {
@@ -19214,12 +19213,16 @@ nav.navbar {
 }
 
 .builder-section.product-section .product-section_background {
-  position: absolute;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   z-index: 1;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
+  background-attachment: fixed;
 }
 
 .builder-section.product-section .product-section_background .product-section_background-slider {
@@ -19228,6 +19231,7 @@ nav.navbar {
   left: 0px;
   right: 0px;
   bottom: 0px;
+  background-attachment: fixed;
 }
 
 .builder-section.product-section .product-section_background .product-section_background-slider .slick-slide,
@@ -19238,6 +19242,19 @@ nav.navbar {
   left: 0px;
   right: 0px;
   bottom: 0px;
+  background-attachment: fixed;
+}
+
+.builder-section.product-section .product-section_background .product-section_background-slider .slick-slide > div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 .builder-section.product-section .product-section_background .slide {
@@ -19249,6 +19266,17 @@ nav.navbar {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.builder-section.product-section .product-section_background .slide:before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .listing {
